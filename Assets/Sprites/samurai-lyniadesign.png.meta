@@ -1,0 +1,1874 @@
+fileFormatVersion: 2
+guid: 30ce40b5848f5cb43932852eb23b63b6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4599845497087338715
+    second: samurai-lyniadesign_0
+  - first:
+      213: -2004056223153241590
+    second: samurai-lyniadesign_1
+  - first:
+      213: 3558192010887297898
+    second: samurai-lyniadesign_2
+  - first:
+      213: 3761769189706492184
+    second: samurai-lyniadesign_3
+  - first:
+      213: -1099709711872266997
+    second: samurai-lyniadesign_4
+  - first:
+      213: -988760559716443213
+    second: samurai-lyniadesign_5
+  - first:
+      213: -2669022664994620453
+    second: samurai-lyniadesign_6
+  - first:
+      213: -3994651154705736035
+    second: samurai-lyniadesign_7
+  - first:
+      213: -9128589441244079069
+    second: samurai-lyniadesign_8
+  - first:
+      213: 7847819494149005225
+    second: samurai-lyniadesign_9
+  - first:
+      213: -5283125677614056939
+    second: samurai-lyniadesign_10
+  - first:
+      213: 1664659521948574931
+    second: samurai-lyniadesign_11
+  - first:
+      213: 5890548872203339034
+    second: samurai-lyniadesign_12
+  - first:
+      213: -7122275682923269221
+    second: samurai-lyniadesign_13
+  - first:
+      213: -3061895850031380967
+    second: samurai-lyniadesign_14
+  - first:
+      213: 1960959659152003243
+    second: samurai-lyniadesign_15
+  - first:
+      213: -6662726644757544252
+    second: samurai-lyniadesign_16
+  - first:
+      213: 3228761675714173145
+    second: samurai-lyniadesign_17
+  - first:
+      213: -1236215237239661678
+    second: samurai-lyniadesign_18
+  - first:
+      213: 9068898050234545549
+    second: samurai-lyniadesign_19
+  - first:
+      213: -5719081018132795415
+    second: samurai-lyniadesign_20
+  - first:
+      213: -9034461313394524389
+    second: samurai-lyniadesign_21
+  - first:
+      213: 138332342105640025
+    second: samurai-lyniadesign_22
+  - first:
+      213: 1018455426743634920
+    second: samurai-lyniadesign_23
+  - first:
+      213: 6873942576500456816
+    second: samurai-lyniadesign_24
+  - first:
+      213: 5731825792922620538
+    second: samurai-lyniadesign_25
+  - first:
+      213: -463908701529608575
+    second: samurai-lyniadesign_26
+  - first:
+      213: -7198536373715071755
+    second: samurai-lyniadesign_27
+  - first:
+      213: -1055226825049375693
+    second: samurai-lyniadesign_28
+  - first:
+      213: -2616017110638864515
+    second: samurai-lyniadesign_29
+  - first:
+      213: 3979664643246070619
+    second: samurai-lyniadesign_30
+  - first:
+      213: -4339620180672053248
+    second: samurai-lyniadesign_31
+  - first:
+      213: 2669484959350854609
+    second: samurai-lyniadesign_32
+  - first:
+      213: 4667136571505433596
+    second: samurai-lyniadesign_33
+  - first:
+      213: 1180023977473718519
+    second: samurai-lyniadesign_34
+  - first:
+      213: -197802935842276788
+    second: samurai-lyniadesign_35
+  - first:
+      213: 5388429689499484140
+    second: samurai-lyniadesign_36
+  - first:
+      213: 6818134791547582920
+    second: samurai-lyniadesign_37
+  - first:
+      213: 5349365247132529437
+    second: samurai-lyniadesign_38
+  - first:
+      213: -3334848315283066120
+    second: samurai-lyniadesign_39
+  - first:
+      213: 7656361887635016724
+    second: samurai-lyniadesign_40
+  - first:
+      213: 570878274607750375
+    second: samurai-lyniadesign_41
+  - first:
+      213: -4013893893664529283
+    second: samurai-lyniadesign_42
+  - first:
+      213: 8731326319358137182
+    second: samurai-lyniadesign_43
+  - first:
+      213: 682068346298861931
+    second: samurai-lyniadesign_44
+  - first:
+      213: 5434902405834349834
+    second: samurai-lyniadesign_45
+  - first:
+      213: -4741831488232429469
+    second: samurai-lyniadesign_46
+  - first:
+      213: -4427300874651191174
+    second: samurai-lyniadesign_47
+  - first:
+      213: 5899902310725010084
+    second: samurai-lyniadesign_48
+  - first:
+      213: 116217546968306633
+    second: samurai-lyniadesign_49
+  - first:
+      213: 1407835532033780722
+    second: samurai-lyniadesign_50
+  - first:
+      213: -1185124322827771637
+    second: samurai-lyniadesign_51
+  - first:
+      213: -3366376966486672823
+    second: samurai-lyniadesign_52
+  - first:
+      213: -7632454438691375618
+    second: samurai-lyniadesign_53
+  - first:
+      213: -3248358398048714600
+    second: samurai-lyniadesign_54
+  - first:
+      213: 1837941689660277819
+    second: samurai-lyniadesign_55
+  - first:
+      213: 2030040024431223506
+    second: samurai-lyniadesign_56
+  - first:
+      213: -4675179865694702459
+    second: samurai-lyniadesign_57
+  - first:
+      213: 1023918905803769676
+    second: samurai-lyniadesign_58
+  - first:
+      213: 202760999144069224
+    second: samurai-lyniadesign_59
+  - first:
+      213: -6334588350092523137
+    second: samurai-lyniadesign_60
+  - first:
+      213: -5798848867002963748
+    second: samurai-lyniadesign_61
+  - first:
+      213: 8583093132437058562
+    second: samurai-lyniadesign_62
+  - first:
+      213: -2037493805016132442
+    second: samurai-lyniadesign_63
+  - first:
+      213: 8708255696190057864
+    second: samurai-lyniadesign_64
+  - first:
+      213: -4196383582986220073
+    second: samurai-lyniadesign_65
+  - first:
+      213: -6239293676519008251
+    second: samurai-lyniadesign_66
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: samurai-lyniadesign_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 256
+        width: 23
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd8229bcb1fe5df30800000000000000
+      internalID: 4599845497087338715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_1
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 256
+        width: 23
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a024a05ab792034e0800000000000000
+      internalID: -2004056223153241590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_2
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 256
+        width: 23
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6bf19328cc316130800000000000000
+      internalID: 3558192010887297898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_3
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 256
+        width: 23
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 819e677b52d743430800000000000000
+      internalID: 3761769189706492184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_4
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 224
+        width: 23
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0d6ec3f7db0db0f0800000000000000
+      internalID: -1099709711872266997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_5
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 224
+        width: 21
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bb5f2672873742f0800000000000000
+      internalID: -988760559716443213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_6
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 224
+        width: 23
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdb778bf60ab5fad0800000000000000
+      internalID: -2669022664994620453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_7
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 224
+        width: 24
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9e192a70f52098c0800000000000000
+      internalID: -3994651154705736035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_8
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 192
+        width: 25
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32cd34eb44cb05180800000000000000
+      internalID: -9128589441244079069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_9
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 192
+        width: 25
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9af132a104e09ec60800000000000000
+      internalID: 7847819494149005225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_10
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 192
+        width: 26
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51ab11aff219ea6b0800000000000000
+      internalID: -5283125677614056939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_11
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 193
+        width: 26
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d467b5f30f0a1710800000000000000
+      internalID: 1664659521948574931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_12
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 192
+        width: 25
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1502c36dfe6fb150800000000000000
+      internalID: 5890548872203339034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_13
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 192
+        width: 25
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b93b4f67008982d90800000000000000
+      internalID: -7122275682923269221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_14
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 192
+        width: 26
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91603af62f5f185d0800000000000000
+      internalID: -3061895850031380967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_15
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 193
+        width: 26
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba050ae9b6ab63b10800000000000000
+      internalID: 1960959659152003243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_16
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 160
+        width: 23
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c242bfca6d3983a0800000000000000
+      internalID: -6662726644757544252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_17
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 160
+        width: 23
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d8965923addecc20800000000000000
+      internalID: 3228761675714173145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_18
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 163
+        width: 24
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29b976e9ac418dee0800000000000000
+      internalID: -1236215237239661678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_19
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 166
+        width: 25
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8576744ab23bdd70800000000000000
+      internalID: 9068898050234545549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_20
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 165
+        width: 26
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9efe3807d1eb1a0b0800000000000000
+      internalID: -5719081018132795415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_21
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 164
+        width: 27
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1f3c165d452f9280800000000000000
+      internalID: -9034461313394524389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_22
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 160
+        width: 27
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95c872048847be100800000000000000
+      internalID: 138332342105640025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_23
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 160
+        width: 27
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8eb8f9a80d7422e00800000000000000
+      internalID: 1018455426743634920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_24
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 160
+        width: 25
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07d3eb68a56256f50800000000000000
+      internalID: 6873942576500456816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_25
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 128
+        width: 23
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a72139da0398b8f40800000000000000
+      internalID: 5731825792922620538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_26
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 128
+        width: 23
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18e6d1d6e7ddf89f0800000000000000
+      internalID: -463908701529608575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_27
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 128
+        width: 24
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fc0cfdbe49a91c90800000000000000
+      internalID: -7198536373715071755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_28
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 128
+        width: 25
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33cf77f1bc41b51f0800000000000000
+      internalID: -1055226825049375693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_29
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 96
+        width: 23
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d77d6025c4a02bbd0800000000000000
+      internalID: -2616017110638864515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_30
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 96
+        width: 23
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5b1dd968eb9a3730800000000000000
+      internalID: 3979664643246070619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_31
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 23
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0000dee107296c3c0800000000000000
+      internalID: -4339620180672053248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_32
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 96
+        width: 23
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d31b5f4d6aeb0520800000000000000
+      internalID: 2669484959350854609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_33
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 64
+        width: 23
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfbd0d6fbfff4c040800000000000000
+      internalID: 4667136571505433596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_34
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 64
+        width: 21
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f8b3c33e89406010800000000000000
+      internalID: 1180023977473718519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_35
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 24
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4a77912743414df0800000000000000
+      internalID: -197802935842276788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_36
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 64
+        width: 24
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ceff8c3e04c87ca40800000000000000
+      internalID: 5388429689499484140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_37
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 24
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c9fce80871ee9e50800000000000000
+      internalID: 6818134791547582920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_38
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 64
+        width: 26
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d137721a953cc3a40800000000000000
+      internalID: 5349365247132529437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_39
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 64
+        width: 39
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f23eb3402d38b1d0800000000000000
+      internalID: -3334848315283066120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_40
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 64
+        width: 41
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41c0358529cd04a60800000000000000
+      internalID: 7656361887635016724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_41
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 64
+        width: 32
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ec9bff14ca2ce700800000000000000
+      internalID: 570878274607750375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_42
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 32
+        width: 23
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d74240e25c8cb48c0800000000000000
+      internalID: -4013893893664529283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_43
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 32
+        width: 23
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e535c53e607eb2970800000000000000
+      internalID: 8731326319358137182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_44
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 32
+        width: 23
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b698ea51c81377900800000000000000
+      internalID: 682068346298861931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_45
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 32
+        width: 41
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0d1ca851f6ac6b40800000000000000
+      internalID: 5434902405834349834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_46
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 32
+        width: 41
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 368e42f7261a13eb0800000000000000
+      internalID: -4741831488232429469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_47
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 32
+        width: 46
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a78b3a4bf411f82c0800000000000000
+      internalID: -4427300874651191174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_48
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 32
+        width: 25
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a2454084e9a0e150800000000000000
+      internalID: 5899902310725010084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_49
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 32
+        width: 38
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c396b34e33ec9100800000000000000
+      internalID: 116217546968306633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_50
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 32
+        width: 45
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fbeb0515f2a98310800000000000000
+      internalID: 1407835532033780722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_51
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 32
+        width: 44
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b01ec2b15b79d8fe0800000000000000
+      internalID: -1185124322827771637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_52
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 0
+        width: 23
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94a318c1cf93841d0800000000000000
+      internalID: -3366376966486672823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_53
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 0
+        width: 21
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef572716023141690800000000000000
+      internalID: -7632454438691375618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_54
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 24
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 890462d5f338be2d0800000000000000
+      internalID: -3248358398048714600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_55
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 24
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b34051a9a3ea18910800000000000000
+      internalID: 1837941689660277819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_56
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 24
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d26c0885a62c2c10800000000000000
+      internalID: 2030040024431223506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_57
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 24
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 584753caeac6e1fb0800000000000000
+      internalID: -4675179865694702459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_58
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 24
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c478d33e1d0b53e00800000000000000
+      internalID: 1023918905803769676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_59
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 0
+        width: 26
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8681940fd0a50d200800000000000000
+      internalID: 202760999144069224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_60
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 39
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f79486a25750718a0800000000000000
+      internalID: -6334588350092523137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_61
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 0
+        width: 46
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd8ac18dda9568fa0800000000000000
+      internalID: -5798848867002963748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_62
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 47
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20471019ab54d1770800000000000000
+      internalID: 8583093132437058562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_63
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 0
+        width: 47
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a454ffed2e59b3e0800000000000000
+      internalID: -2037493805016132442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_64
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 32
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88d2ea8da60f9d870800000000000000
+      internalID: 8708255696190057864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_65
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 0
+        width: 24
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dd43da5d5373c5c0800000000000000
+      internalID: -4196383582986220073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: samurai-lyniadesign_66
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 0
+        width: 24
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5085eb955739969a0800000000000000
+      internalID: -6239293676519008251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: c51f82ee798116241b10f4423ca86734
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":15.0,"y":9.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      samurai-lyniadesign_0: 4599845497087338715
+      samurai-lyniadesign_1: -2004056223153241590
+      samurai-lyniadesign_10: -5283125677614056939
+      samurai-lyniadesign_11: 1664659521948574931
+      samurai-lyniadesign_12: 5890548872203339034
+      samurai-lyniadesign_13: -7122275682923269221
+      samurai-lyniadesign_14: -3061895850031380967
+      samurai-lyniadesign_15: 1960959659152003243
+      samurai-lyniadesign_16: -6662726644757544252
+      samurai-lyniadesign_17: 3228761675714173145
+      samurai-lyniadesign_18: -1236215237239661678
+      samurai-lyniadesign_19: 9068898050234545549
+      samurai-lyniadesign_2: 3558192010887297898
+      samurai-lyniadesign_20: -5719081018132795415
+      samurai-lyniadesign_21: -9034461313394524389
+      samurai-lyniadesign_22: 138332342105640025
+      samurai-lyniadesign_23: 1018455426743634920
+      samurai-lyniadesign_24: 6873942576500456816
+      samurai-lyniadesign_25: 5731825792922620538
+      samurai-lyniadesign_26: -463908701529608575
+      samurai-lyniadesign_27: -7198536373715071755
+      samurai-lyniadesign_28: -1055226825049375693
+      samurai-lyniadesign_29: -2616017110638864515
+      samurai-lyniadesign_3: 3761769189706492184
+      samurai-lyniadesign_30: 3979664643246070619
+      samurai-lyniadesign_31: -4339620180672053248
+      samurai-lyniadesign_32: 2669484959350854609
+      samurai-lyniadesign_33: 4667136571505433596
+      samurai-lyniadesign_34: 1180023977473718519
+      samurai-lyniadesign_35: -197802935842276788
+      samurai-lyniadesign_36: 5388429689499484140
+      samurai-lyniadesign_37: 6818134791547582920
+      samurai-lyniadesign_38: 5349365247132529437
+      samurai-lyniadesign_39: -3334848315283066120
+      samurai-lyniadesign_4: -1099709711872266997
+      samurai-lyniadesign_40: 7656361887635016724
+      samurai-lyniadesign_41: 570878274607750375
+      samurai-lyniadesign_42: -4013893893664529283
+      samurai-lyniadesign_43: 8731326319358137182
+      samurai-lyniadesign_44: 682068346298861931
+      samurai-lyniadesign_45: 5434902405834349834
+      samurai-lyniadesign_46: -4741831488232429469
+      samurai-lyniadesign_47: -4427300874651191174
+      samurai-lyniadesign_48: 5899902310725010084
+      samurai-lyniadesign_49: 116217546968306633
+      samurai-lyniadesign_5: -988760559716443213
+      samurai-lyniadesign_50: 1407835532033780722
+      samurai-lyniadesign_51: -1185124322827771637
+      samurai-lyniadesign_52: -3366376966486672823
+      samurai-lyniadesign_53: -7632454438691375618
+      samurai-lyniadesign_54: -3248358398048714600
+      samurai-lyniadesign_55: 1837941689660277819
+      samurai-lyniadesign_56: 2030040024431223506
+      samurai-lyniadesign_57: -4675179865694702459
+      samurai-lyniadesign_58: 1023918905803769676
+      samurai-lyniadesign_59: 202760999144069224
+      samurai-lyniadesign_6: -2669022664994620453
+      samurai-lyniadesign_60: -6334588350092523137
+      samurai-lyniadesign_61: -5798848867002963748
+      samurai-lyniadesign_62: 8583093132437058562
+      samurai-lyniadesign_63: -2037493805016132442
+      samurai-lyniadesign_64: 8708255696190057864
+      samurai-lyniadesign_65: -4196383582986220073
+      samurai-lyniadesign_66: -6239293676519008251
+      samurai-lyniadesign_7: -3994651154705736035
+      samurai-lyniadesign_8: -9128589441244079069
+      samurai-lyniadesign_9: 7847819494149005225
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
