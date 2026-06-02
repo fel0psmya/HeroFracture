@@ -41,6 +41,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 4021153921
+    locked: 0
+  - name: Cenario
+    uniqueID: 1671095567
+    locked: 0
+  - name: Entidades
+    uniqueID: 3333343075
+    locked: 0
+  - name: UI
+    uniqueID: 3040570243
+    locked: 0
   m_RenderingLayers:
   - Default
   m_MigratedRenderPipelines: []
