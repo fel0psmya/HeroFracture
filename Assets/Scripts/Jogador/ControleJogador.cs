@@ -14,16 +14,20 @@ public class ControleJogador : MonoBehaviour
     private Rigidbody2D rb;
     private Animator anim;
     private float movimentoHorizontal;
+    private DashJogador dash;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        dash = GetComponent<DashJogador>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (EstaBloqueadoPeloDash()) return;
+
         movimentoHorizontal = Input.GetAxisRaw("Horizontal");
 
         if(Input.GetButtonDown("Jump") && estaNoChao)
@@ -37,10 +41,19 @@ public class ControleJogador : MonoBehaviour
 
     void FixedUpdate()
     {
-        // Aplica a velocidade horizontal na física
-        rb.linearVelocity = new Vector2(movimentoHorizontal * velocidade, rb.linearVelocity.y);
+        if (EstaBloqueadoPeloDash()) return;
 
-        // Verifica se o jogador está tocando o chão usando um pequeno círculo nos pés
+        // Aplica a velocidade horizontal na física
+        if (movimentoHorizontal != 0)
+        {
+            rb.linearVelocity = new Vector2(movimentoHorizontal * velocidade, rb.linearVelocity.y);
+        }
+        else
+        {
+            // Se soltou a tecla, para
+            rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
+        }
+
         estaNoChao = Physics2D.OverlapCircle(checadorChao.position, 0.2f, camadaChao);
     }
 
@@ -67,5 +80,10 @@ public class ControleJogador : MonoBehaviour
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(checadorChao.position, 0.2f);
         }
+    }
+
+    private bool EstaBloqueadoPeloDash()
+    {
+        return dash != null && dash.EstaDandoDash();
     }
 }
