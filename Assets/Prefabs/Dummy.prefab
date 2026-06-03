@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6903502843226591918}
   - component: {fileID: 2361322924904722980}
   - component: {fileID: 6112530389685900502}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Dummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,6 +177,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SistemaVida
   maxVida: 5
   textoVida: {fileID: 2887424304000010031}
+  spriteRenderer: {fileID: 4385667038834283857}
+  corDano: {r: 1, g: 0, b: 0, a: 1}
+  tempoPiscar: 0.15
 --- !u!1 &4837805880029453511
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,7 +191,7 @@ GameObject:
   - component: {fileID: 3868179850143173212}
   - component: {fileID: 2222457943208882944}
   - component: {fileID: 2887424304000010031}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: VidaDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -367,7 +370,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1106261763249285807}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PosicaoTexto
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -1,20 +1,33 @@
 using UnityEngine;
 using TMPro;
+using System.Collections;
+using UnityEngine.SceneManagement;
+
 public class SistemaVida : MonoBehaviour
 {
     [Header("Configurações de Vida")]
     [SerializeField] private float maxVida = 5.0f;
     private float vidaAtual;
 
-    [Header("Interface Flutuante")]
+    [Header("Interface e Visual")]
     [SerializeField] private TMP_Text textoVida;
+    [SerializeField] private SpriteRenderer spriteRenderer; // Referência para a imagem do personagem
+    [SerializeField] private Color corDano = Color.red;     // Cor que ele pisca ao apanhar
+    [SerializeField] private float tempoPiscar = 0.15f;
 
     private Animator anim;
+    private Color corOriginal = Color.white;
 
     void Start()
     {
         vidaAtual = maxVida;
-        anim = GetComponent<Animator>();
+        anim = GetComponentInChildren<Animator>();
+
+        if (spriteRenderer != null)
+        {
+            corOriginal = spriteRenderer.color;
+        }
+
         AtualizarTexto();
     }
 
@@ -22,20 +35,29 @@ public class SistemaVida : MonoBehaviour
     {
         vidaAtual -= dano;
         vidaAtual = Mathf.Max(vidaAtual, 0); // Impede a vida de mostrar valores negativos
-
         AtualizarTexto();
         Debug.Log($"{gameObject.name} tomou {dano} de dano. Vida restante: {vidaAtual}");
 
-        // Ativa a animação de impacto se o Animator existir
-        if (anim != null)
-        {
-            anim.SetTrigger("tomouDano");
-        }
-
         if (vidaAtual <= 0)
         {
+            vidaAtual = 0;
+            AtualizarTexto();
             Morrer();
         }
+        else
+        {
+            if (spriteRenderer != null)
+            {
+                StartCoroutine(PiscarEfeitoDano());
+            }
+        }
+    }
+
+    private IEnumerator PiscarEfeitoDano()
+    {
+        spriteRenderer.color = corDano;
+        yield return new WaitForSeconds(tempoPiscar);
+        spriteRenderer.color = corOriginal;
     }
 
     private void AtualizarTexto()
@@ -48,7 +70,48 @@ public class SistemaVida : MonoBehaviour
     }
     private void Morrer()
     {
-        Debug.Log($"{gameObject.name} foi destruído");
-        Destroy(gameObject);
+        if (spriteRenderer != null) spriteRenderer.color = corOriginal;
+
+        MonoBehaviour[] scripts = GetComponents<MonoBehaviour>();
+        foreach (MonoBehaviour script in scripts)
+        {
+            if (script != this) script.enabled = false;
+        }
+
+        if (anim != null)
+        {
+            anim.SetBool("isDead", true);
+            anim.Play("Death");
+            StartCoroutine(RotinaDestruicao());
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    private IEnumerator RotinaDestruicao()
+    {
+        Collider2D col = GetComponent<Collider2D>();
+        if (col != null) col.enabled = false;
+        
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.linearVelocity = Vector2.zero;
+            rb.bodyType = RigidbodyType2D.Kinematic; 
+        }
+
+        if (gameObject.CompareTag("Player"))
+        {
+            yield return new WaitForSeconds(1.5f);
+            
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+        else
+        {
+            yield return new WaitForSeconds(0.6f);
+            Destroy(gameObject);
+        }
     }
 }

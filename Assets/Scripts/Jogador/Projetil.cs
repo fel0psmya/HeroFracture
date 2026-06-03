@@ -15,6 +15,8 @@ public class Projetil : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D colisor)
     {
+        if (colisor.CompareTag("Player")) return;
+
         // Procura o sistema de vida no objeto atingido
         SistemaVida vidaDoAlvo = colisor.GetComponent<SistemaVida>();
 

@@ -31,6 +31,12 @@ public class AtaqueJogador : MonoBehaviour
         estaAtacando = true;
         anim.SetTrigger("attack");
     }
+
+    private void OnDisable()
+    {
+        estaAtacando = false;
+    }
+
     void Atacar()
     {
         if (projetilPrefab == null || pontoDisparo == null) return;
