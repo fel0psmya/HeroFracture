@@ -8,6 +8,7 @@ public class DroneAtaqueProximidade : MonoBehaviour
     private Transform alvoJogador;
     private Rigidbody2D rb;
     private Animator anim;
+    private SistemaVida minhaVida;
 
     [Header("Configurações de Distância")]
     [SerializeField] private float raioDetecao = 7f;
@@ -21,6 +22,10 @@ public class DroneAtaqueProximidade : MonoBehaviour
     [SerializeField] private float duracaoAnimacaoAtaque = 0.4f;
     [SerializeField] private float cooldownAtaque = 1.5f;
 
+    [Header("Dano de Contato")]
+    [SerializeField] private float cooldownDanoContato = 1f;
+    private float ultimoTempoContato = 0f;
+
     [Header("Configurações de Visão")]
     [SerializeField] private LayerMask mascaraCenario;    private bool bateuEmObstaculo = false;
 
@@ -32,11 +37,17 @@ public class DroneAtaqueProximidade : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponentInChildren<Animator>();
+        minhaVida = GetComponent<SistemaVida>();
 
         GameObject jogadorObj = GameObject.FindWithTag(tagJogador);
         if (jogadorObj != null)
         {
             alvoJogador = jogadorObj.transform;
+        }
+        if (minhaVida != null)
+        {
+            // Quando o evento OnDanoRecebido for disparado, roda o AcordarDrone
+            minhaVida.OnDanoRecebido += AcordarDrone; 
         }
     }
 
@@ -171,25 +182,40 @@ public class DroneAtaqueProximidade : MonoBehaviour
         VerificarEAplicarImpacto(collision);
     }
 
+    private void OnDestroy() 
+    {
+        if (minhaVida != null)
+        {
+            minhaVida.OnDanoRecebido -= AcordarDrone;
+        }
+    }
+
+    private void AcordarDrone()
+    {
+        raioDetecao = 1000f;
+    }
+    
     private void VerificarEAplicarImpacto(Collision2D collision)
     {
-        if (estaAtacando && !causouDano && collision.gameObject.CompareTag(tagJogador))
+        if (collision.gameObject.CompareTag(tagJogador))
         {
             SistemaVida vidaSamurai = collision.gameObject.GetComponent<SistemaVida>();
             if (vidaSamurai != null)
             {
-                vidaSamurai.TomarDano(danoAtaque);
-                causouDano = true;
-                Physics2D.IgnoreCollision(collision.collider, collision.otherCollider, true); // Ignorar a colisão física entre o jogador e o drone temporariamente para não causar um empurrão
+                // 1. DANO DO BOTE 
+                if (estaAtacando && !causouDano)
+                {
+                    vidaSamurai.TomarDano(danoAtaque);
+                    causouDano = true;
+                    Physics2D.IgnoreCollision(collision.collider, collision.otherCollider, true); 
+                }
+                // 2. DANO DE CONTATO 
+                else if (!estaAtacando && Time.time >= ultimoTempoContato)
+                {
+                    vidaSamurai.TomarDano(danoAtaque/2f); // Dano de contato é metade do dano do ataque
+                    ultimoTempoContato = Time.time + cooldownDanoContato;
+                }
             }
         }
-    }
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, raioDetecao);
-
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, raioAtaque);
     }
 }

@@ -53,6 +53,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 6470283095786911363}
   corDano: {r: 1, g: 0, b: 0, a: 1}
   tempoPiscar: 0.15
+  prefabDrop: {fileID: 3667529931347191712, guid: e3128bd5b3b7a564ba8ed38b555cacd5, type: 3}
 --- !u!114 &1467110135013219167
 MonoBehaviour:
   m_ObjectHideFlags: 0

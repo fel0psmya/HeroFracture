@@ -1,7 +1,9 @@
 using UnityEngine;
 using TMPro;
+using System;
 using System.Collections;
 using UnityEngine.SceneManagement;
+
 
 public class SistemaVida : MonoBehaviour
 {
@@ -15,9 +17,13 @@ public class SistemaVida : MonoBehaviour
     [SerializeField] private Color corDano = Color.red;     // Cor que ele pisca ao apanhar
     [SerializeField] private float tempoPiscar = 0.15f;
 
+    [Header("Recompensas (Apenas Inimigos)")]
+    [SerializeField] private GameObject prefabDrop;
+
     private Animator anim;
     private Color corOriginal = Color.white;
-
+    public event Action OnDanoRecebido;
+    
     void Start()
     {
         vidaAtual = maxVida;
@@ -37,6 +43,8 @@ public class SistemaVida : MonoBehaviour
         vidaAtual = Mathf.Max(vidaAtual, 0); // Impede a vida de mostrar valores negativos
         AtualizarTexto();
         Debug.Log($"{gameObject.name} tomou {dano} de dano. Vida restante: {vidaAtual}");
+
+        OnDanoRecebido?.Invoke();
 
         if (vidaAtual <= 0)
         {
@@ -110,6 +118,10 @@ public class SistemaVida : MonoBehaviour
         }
         else
         {
+            if (prefabDrop != null)
+            {
+                Instantiate(prefabDrop, transform.position, Quaternion.identity);
+            }
             yield return new WaitForSeconds(0.6f);
             Destroy(gameObject);
         }
