@@ -39,4 +39,9 @@ public class Projetil : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    public void ConfigurarDanoBonus(float bonus)
+    {
+        danoProjetil += bonus;
+    }
 }
