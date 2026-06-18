@@ -17,14 +17,20 @@ public class Projetil : MonoBehaviour
     {
         if (colisor.CompareTag("Player")) return;
 
-        // Procura o sistema de vida no objeto atingido
         SistemaVida vidaDoAlvo = colisor.GetComponent<SistemaVida>();
-
         if (vidaDoAlvo != null)
         {
             vidaDoAlvo.TomarDano(danoProjetil);
             Destroy(gameObject);
             return; // Evitar dupla checagem
+        }
+
+        ObjetoQuebravel caixa = colisor.GetComponent<ObjetoQuebravel>();
+        if (caixa != null)
+        {
+            caixa.TomarGolpe();
+            Destroy(gameObject);
+            return;
         }
         
         // Se bater nas plataformas ou chão, também se destrói

@@ -9,6 +9,7 @@ public class SistemaVida : MonoBehaviour
 {
     [Header("Configurações de Vida")]
     [SerializeField] private float maxVida = 5.0f;
+    public float MaxVida { get { return maxVida; } private set { maxVida = value; } }
     private float vidaAtual;
 
     [Header("Interface e Visual")]
@@ -48,7 +49,6 @@ public class SistemaVida : MonoBehaviour
 
         if (vidaAtual <= 0)
         {
-            vidaAtual = 0;
             AtualizarTexto();
             Morrer();
         }
@@ -61,9 +61,38 @@ public class SistemaVida : MonoBehaviour
         }
     }
 
+    public void Curar(float quantidade)
+    {
+        if (vidaAtual <= 0) return; 
+
+        vidaAtual += quantidade;
+        vidaAtual = Mathf.Min(vidaAtual, maxVida);
+        
+        if (spriteRenderer != null)
+        {
+            StartCoroutine(PiscarEfeitoCura());
+        }
+
+        AtualizarTexto();
+        Debug.Log($"{gameObject.name} curou {quantidade} de vida. Vida atual: {vidaAtual}");
+    }
+
+    public void AumentarVidaMaxima(float quantidadeBonus)
+    {
+        maxVida += quantidadeBonus;
+        Curar(quantidadeBonus); 
+    }
+
     private IEnumerator PiscarEfeitoDano()
     {
         spriteRenderer.color = corDano;
+        yield return new WaitForSeconds(tempoPiscar);
+        spriteRenderer.color = corOriginal;
+    }
+
+    private IEnumerator PiscarEfeitoCura()
+    {
+        spriteRenderer.color = Color.green;
         yield return new WaitForSeconds(tempoPiscar);
         spriteRenderer.color = corOriginal;
     }
