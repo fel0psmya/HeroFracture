@@ -20,6 +20,7 @@ public class AtaqueJogador : MonoBehaviour
 
     private Animator anim;
     private bool estaAtacando = false;
+    private float bonusDano = 0f;
 
     void Start()
     {
@@ -89,6 +90,13 @@ public class AtaqueJogador : MonoBehaviour
 
         GameObject projetil = Instantiate(projetilPrefab, pontoDisparo.position, Quaternion.identity);
 
+        // Injeção de bônus de dano, caso exista pelos upgrades comprados
+        Projetil scriptProjetil = projetil.GetComponent<Projetil>();
+        if (scriptProjetil != null)
+        {
+            scriptProjetil.ConfigurarDanoBonus(bonusDano);
+        }
+
         float direcaoOlhar = Mathf.Sign(transform.localScale.x);
         
         Rigidbody2D rbProjetil = projetil.GetComponent<Rigidbody2D>();
@@ -106,5 +114,11 @@ public class AtaqueJogador : MonoBehaviour
     public void FinalizarAtaque()
     {
         estaAtacando = false;
+    }
+
+    public void AumentarDano(float bonus)
+    {
+        bonusDano += bonus;
+        Debug.Log($"Dano da katana atualizado! Bônus atual: +{bonusDano}");
     }
 }

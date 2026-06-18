@@ -54,6 +54,10 @@ public class SistemaVida : MonoBehaviour
         }
         else
         {
+            if (TemParametro(anim, "tomouDano"))
+            {
+                anim.SetTrigger("tomouDano");
+            }
             if (spriteRenderer != null)
             {
                 StartCoroutine(PiscarEfeitoDano());
@@ -155,4 +159,16 @@ public class SistemaVida : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private bool TemParametro(Animator animator, string nomeParametro)
+{
+    foreach (AnimatorControllerParameter param in animator.parameters)
+    {
+        if (param.name == nomeParametro) 
+        {
+            return true;
+        }
+    }
+    return false;
+}
 }

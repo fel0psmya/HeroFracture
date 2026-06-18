@@ -620,7 +620,7 @@ MonoBehaviour:
   velocidade: 8
   forcaPulo: 12
   checadorChao: {fileID: 1624354660}
-  tamanhoChecador: {x: 1.07, y: 0.1}
+  tamanhoChecador: {x: 0.5, y: 0.1}
   camadaChao:
     serializedVersion: 2
     m_Bits: 264
@@ -661,8 +661,8 @@ MonoBehaviour:
   projetilPrefab: {fileID: 5003133073319041160, guid: fc3a2663e9c2a294a98413ed7b19f318, type: 3}
   pontoDisparo: {fileID: 2125597492}
   velocidadeProjetil: 10
-  maxMunicao: 5
-  tempoEsperaInatividade: 5
+  maxMunicao: 8
+  tempoEsperaInatividade: 2
   tempoRegeneracaoTotal: 3
 --- !u!114 &874003852
 MonoBehaviour:
@@ -711,6 +711,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01bdee6cf51fe5c42869ae38a5c2f5a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GerenciadorEvolucao
+  upgradesComprados: []
+  upgradeParaTestar: {fileID: 11400000, guid: e56c6a972b2d74d429177cadd1951a4e, type: 2}
 --- !u!1 &939000264
 GameObject:
   m_ObjectHideFlags: 0

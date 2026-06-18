@@ -84,6 +84,15 @@ public class DashJogador : MonoBehaviour
         podeDarDash = true;
     }
 
+    public void ReduzirTempoRecarga(float reducao)
+    {
+        tempoRecarga += reducao; 
+        
+        if (tempoRecarga < 0.1f) tempoRecarga = 0.1f; 
+        
+        Debug.Log($"Novo tempo de recarga do Dash: {tempoRecarga}s");
+    }
+
     public bool EstaDandoDash()
     {
         return estaDandoDash;
