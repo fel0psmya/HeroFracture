@@ -623,7 +623,7 @@ MonoBehaviour:
   tamanhoChecador: {x: 1.07, y: 0.1}
   camadaChao:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 264
 --- !u!95 &874003850
 Animator:
   serializedVersion: 7
@@ -661,6 +661,9 @@ MonoBehaviour:
   projetilPrefab: {fileID: 5003133073319041160, guid: fc3a2663e9c2a294a98413ed7b19f318, type: 3}
   pontoDisparo: {fileID: 2125597492}
   velocidadeProjetil: 10
+  maxMunicao: 5
+  tempoEsperaInatividade: 5
+  tempoRegeneracaoTotal: 3
 --- !u!114 &874003852
 MonoBehaviour:
   m_ObjectHideFlags: 0
