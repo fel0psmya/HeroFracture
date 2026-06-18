@@ -8,6 +8,7 @@ public class ControleJogador : MonoBehaviour
 
     [Header("Verificação de Chão")]
     public Transform checadorChao;
+    public Vector2 tamanhoChecador = new Vector2(0.5f, 0.1f);
     public LayerMask camadaChao;
     private bool estaNoChao;
 
@@ -54,7 +55,16 @@ public class ControleJogador : MonoBehaviour
             rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
         }
 
-        estaNoChao = Physics2D.OverlapCircle(checadorChao.position, 0.2f, camadaChao);
+        Collider2D meuColisor = GetComponent<Collider2D>();
+        if (meuColisor != null)
+        {
+            Vector2 centroBaseColisor = new Vector2(meuColisor.bounds.center.x, meuColisor.bounds.min.y);
+            estaNoChao = Physics2D.OverlapBox(centroBaseColisor, tamanhoChecador, 0f, camadaChao);
+        }
+        else
+        {
+            estaNoChao = Physics2D.OverlapBox(checadorChao.position, tamanhoChecador, 0f, camadaChao);
+        }
     }
 
     void AjustarDirecaoSprite()
@@ -75,10 +85,12 @@ public class ControleJogador : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        if (checadorChao != null)
+        Collider2D meuColisor = GetComponent<Collider2D>();
+        if (meuColisor != null)
         {
             Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(checadorChao.position, 0.2f);
+            Vector2 centroBaseColisor = new Vector2(meuColisor.bounds.center.x, meuColisor.bounds.min.y);
+            Gizmos.DrawWireCube(centroBaseColisor, tamanhoChecador);
         }
     }
 

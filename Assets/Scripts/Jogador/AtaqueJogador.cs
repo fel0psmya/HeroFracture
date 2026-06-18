@@ -9,18 +9,30 @@ public class AtaqueJogador : MonoBehaviour
     [Header("Configurações de Ataque")]
     [SerializeField] private float velocidadeProjetil = 15f;
     
+    [Header("Sistema de Munição")]
+    [SerializeField] private int maxMunicao = 5;
+    [SerializeField] private float tempoEsperaInatividade = 10.0f;
+    [SerializeField] private float tempoRegeneracaoTotal = 2.0f;
+
+    private int municaoAtual;
+    private float cronometroRegeneracao;
+    private bool recarregandoTudo = false;
+
     private Animator anim;
     private bool estaAtacando = false;
 
     void Start()
     {
         anim = GetComponent<Animator>();
+        municaoAtual = maxMunicao;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if ((Input.GetButtonDown("Fire1") || Input.GetKeyDown(KeyCode.B)) && !estaAtacando)
+        CalcularRegeneracaoMunicao();
+
+        if ((Input.GetButtonDown("Fire1") || Input.GetKeyDown(KeyCode.B)) && !estaAtacando && municaoAtual > 0)
         {
             IniciarAtaque();
         }
@@ -29,7 +41,41 @@ public class AtaqueJogador : MonoBehaviour
     void IniciarAtaque()
     {
         estaAtacando = true;
+        municaoAtual--;
+
+        cronometroRegeneracao = 0f;
+        recarregandoTudo = false;
+
         anim.SetTrigger("attack");
+        Debug.Log($"Energia Restante: {municaoAtual}/{maxMunicao}");
+    }
+
+    private void CalcularRegeneracaoMunicao()
+    {
+        if (municaoAtual >= maxMunicao) return;
+
+        if (!recarregandoTudo)
+        {
+            cronometroRegeneracao += Time.deltaTime;
+
+            if (cronometroRegeneracao >= tempoEsperaInatividade)
+            {
+                recarregandoTudo = true;
+                cronometroRegeneracao= 0f;
+            }
+        }
+        else
+        {
+            cronometroRegeneracao += Time.deltaTime;
+
+            if (cronometroRegeneracao >= tempoRegeneracaoTotal)
+            {
+                municaoAtual = maxMunicao;
+                recarregandoTudo = false;
+                cronometroRegeneracao = 0f;
+                Debug.Log($"Katana Totalmente Recarregada! Munição: {municaoAtual}/{maxMunicao}");
+            }
+        }
     }
 
     private void OnDisable()

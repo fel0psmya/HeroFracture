@@ -1,12 +1,15 @@
 using UnityEngine;
 using TMPro;
+using System;
 using System.Collections;
 using UnityEngine.SceneManagement;
+
 
 public class SistemaVida : MonoBehaviour
 {
     [Header("Configurações de Vida")]
     [SerializeField] private float maxVida = 5.0f;
+    public float MaxVida { get { return maxVida; } private set { maxVida = value; } }
     private float vidaAtual;
 
     [Header("Interface e Visual")]
@@ -15,9 +18,13 @@ public class SistemaVida : MonoBehaviour
     [SerializeField] private Color corDano = Color.red;     // Cor que ele pisca ao apanhar
     [SerializeField] private float tempoPiscar = 0.15f;
 
+    [Header("Recompensas (Apenas Inimigos)")]
+    [SerializeField] private GameObject prefabDrop;
+
     private Animator anim;
     private Color corOriginal = Color.white;
-
+    public event Action OnDanoRecebido;
+    
     void Start()
     {
         vidaAtual = maxVida;
@@ -38,9 +45,10 @@ public class SistemaVida : MonoBehaviour
         AtualizarTexto();
         Debug.Log($"{gameObject.name} tomou {dano} de dano. Vida restante: {vidaAtual}");
 
+        OnDanoRecebido?.Invoke();
+
         if (vidaAtual <= 0)
         {
-            vidaAtual = 0;
             AtualizarTexto();
             Morrer();
         }
@@ -53,9 +61,38 @@ public class SistemaVida : MonoBehaviour
         }
     }
 
+    public void Curar(float quantidade)
+    {
+        if (vidaAtual <= 0) return; 
+
+        vidaAtual += quantidade;
+        vidaAtual = Mathf.Min(vidaAtual, maxVida);
+        
+        if (spriteRenderer != null)
+        {
+            StartCoroutine(PiscarEfeitoCura());
+        }
+
+        AtualizarTexto();
+        Debug.Log($"{gameObject.name} curou {quantidade} de vida. Vida atual: {vidaAtual}");
+    }
+
+    public void AumentarVidaMaxima(float quantidadeBonus)
+    {
+        maxVida += quantidadeBonus;
+        Curar(quantidadeBonus); 
+    }
+
     private IEnumerator PiscarEfeitoDano()
     {
         spriteRenderer.color = corDano;
+        yield return new WaitForSeconds(tempoPiscar);
+        spriteRenderer.color = corOriginal;
+    }
+
+    private IEnumerator PiscarEfeitoCura()
+    {
+        spriteRenderer.color = Color.green;
         yield return new WaitForSeconds(tempoPiscar);
         spriteRenderer.color = corOriginal;
     }
@@ -110,6 +147,10 @@ public class SistemaVida : MonoBehaviour
         }
         else
         {
+            if (prefabDrop != null)
+            {
+                Instantiate(prefabDrop, transform.position, Quaternion.identity);
+            }
             yield return new WaitForSeconds(0.6f);
             Destroy(gameObject);
         }

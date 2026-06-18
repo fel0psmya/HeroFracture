@@ -448,6 +448,7 @@ GameObject:
   - component: {fileID: 874003851}
   - component: {fileID: 874003852}
   - component: {fileID: 874003853}
+  - component: {fileID: 874003854}
   m_Layer: 6
   m_Name: Jogador
   m_TagString: Player
@@ -596,7 +597,7 @@ Transform:
   m_GameObject: {fileID: 874003844}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.14, y: 11.15, z: 0}
+  m_LocalPosition: {x: -1.62, y: 9.1, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -619,9 +620,10 @@ MonoBehaviour:
   velocidade: 8
   forcaPulo: 12
   checadorChao: {fileID: 1624354660}
+  tamanhoChecador: {x: 1.07, y: 0.1}
   camadaChao:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 264
 --- !u!95 &874003850
 Animator:
   serializedVersion: 7
@@ -659,6 +661,9 @@ MonoBehaviour:
   projetilPrefab: {fileID: 5003133073319041160, guid: fc3a2663e9c2a294a98413ed7b19f318, type: 3}
   pontoDisparo: {fileID: 2125597492}
   velocidadeProjetil: 10
+  maxMunicao: 5
+  tempoEsperaInatividade: 5
+  tempoRegeneracaoTotal: 3
 --- !u!114 &874003852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -688,11 +693,70 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 735343dd440eecf4cbbf780cc2d417f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SistemaVida
-  maxVida: 1
+  maxVida: 3
   textoVida: {fileID: 0}
   spriteRenderer: {fileID: 874003847}
   corDano: {r: 1, g: 0, b: 0, a: 1}
   tempoPiscar: 0.15
+  prefabDrop: {fileID: 0}
+--- !u!114 &874003854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874003844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01bdee6cf51fe5c42869ae38a5c2f5a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GerenciadorEvolucao
+--- !u!1 &939000264
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 939000266}
+  - component: {fileID: 939000265}
+  m_Layer: 0
+  m_Name: SpawnPointCaixa
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &939000265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939000264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b8b504bb2be7b24fb38e802dcdc3a03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnerObjeto
+  prefabParaSpawnar: {fileID: 968517838492339514, guid: 5b72fd1dd131d5149bb6b63ce20ce289, type: 3}
+  tempoRespawn: 5
+--- !u!4 &939000266
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939000264}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.2, y: 7.52, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1273427384
 GameObject:
   m_ObjectHideFlags: 0
@@ -733,7 +797,7 @@ Transform:
   m_GameObject: {fileID: 1273427384}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.92, y: 8, z: 0}
+  m_LocalPosition: {x: 11, y: 8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1788,4 +1852,5 @@ SceneRoots:
   - {fileID: 422143540}
   - {fileID: 13648961}
   - {fileID: 1273427386}
+  - {fileID: 939000266}
   - {fileID: 1485185585}
