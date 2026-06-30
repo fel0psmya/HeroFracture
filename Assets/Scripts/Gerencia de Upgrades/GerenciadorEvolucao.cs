@@ -49,6 +49,11 @@ public class GerenciadorEvolucao : MonoBehaviour
     {
         dataNodesColetados += quantidade;
         Debug.Log($"Data-Node coletado! Saldo: {dataNodesColetados}");
+
+        if (GerenciadorInterface.Instancia != null)
+        {
+            GerenciadorInterface.Instancia.AtualizarHUD();
+        }
     }
 
     public void TentarComprarUpgrade(UpgradeData upgrade)

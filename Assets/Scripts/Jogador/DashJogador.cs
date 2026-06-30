@@ -36,7 +36,9 @@ public class DashJogador : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.C)) && podeDarDash)
+        if (Time.timeScale == 0f) return; // Se o jogo estiver pausado
+
+        if (Input.GetKeyDown(KeyCode.LeftShift) && podeDarDash)
         {
             StartCoroutine(RotinaDash());
         }

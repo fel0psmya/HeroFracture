@@ -31,9 +31,11 @@ public class AtaqueJogador : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Time.timeScale == 0f) return; // Se o jogo estiver pausado
+
         CalcularRegeneracaoMunicao();
 
-        if ((Input.GetButtonDown("Fire1") || Input.GetKeyDown(KeyCode.B)) && !estaAtacando && municaoAtual > 0)
+        if ((Input.GetButtonDown("Fire1") || Input.GetKeyDown(KeyCode.C)) && !estaAtacando && municaoAtual > 0)
         {
             IniciarAtaque();
         }
