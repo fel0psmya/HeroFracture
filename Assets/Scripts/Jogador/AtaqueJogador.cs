@@ -26,14 +26,17 @@ public class AtaqueJogador : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         municaoAtual = maxMunicao;
+        ChamarAtualizarHUD();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Time.timeScale == 0f) return; // Se o jogo estiver pausado
+
         CalcularRegeneracaoMunicao();
 
-        if ((Input.GetButtonDown("Fire1") || Input.GetKeyDown(KeyCode.B)) && !estaAtacando && municaoAtual > 0)
+        if ((Input.GetButtonDown("Fire1") || Input.GetKeyDown(KeyCode.C)) && !estaAtacando && municaoAtual > 0)
         {
             IniciarAtaque();
         }
@@ -49,6 +52,8 @@ public class AtaqueJogador : MonoBehaviour
 
         anim.SetTrigger("attack");
         Debug.Log($"Energia Restante: {municaoAtual}/{maxMunicao}");
+
+        ChamarAtualizarHUD();
     }
 
     private void CalcularRegeneracaoMunicao()
@@ -69,13 +74,32 @@ public class AtaqueJogador : MonoBehaviour
         {
             cronometroRegeneracao += Time.deltaTime;
 
-            if (cronometroRegeneracao >= tempoRegeneracaoTotal)
+            float tempoPorBala = tempoRegeneracaoTotal / maxMunicao;
+            float progressoBalaAtual = cronometroRegeneracao / tempoPorBala;
+
+            ChamarAtualizarHUD(progressoBalaAtual);
+
+            if (cronometroRegeneracao >= tempoPorBala)
             {
-                municaoAtual = maxMunicao;
-                recarregandoTudo = false;
+                municaoAtual++;
                 cronometroRegeneracao = 0f;
-                Debug.Log($"Katana Totalmente Recarregada! Munição: {municaoAtual}/{maxMunicao}");
+
+                if (municaoAtual >= maxMunicao)
+                {
+                    recarregandoTudo = false;
+                    Debug.Log($"Katana Totalmente Recarregada! Munição: {municaoAtual}/{maxMunicao}");
+                }
+
+                ChamarAtualizarHUD(0f);
             }
+        }
+    }
+
+    private void ChamarAtualizarHUD(float progressoBalaAtual = 0f)
+    {
+        if (GerenciadorInterface.Instancia != null)
+        {
+            GerenciadorInterface.Instancia.AtualizarMunicaoHUD(municaoAtual, progressoBalaAtual);
         }
     }
 

@@ -12,10 +12,13 @@ public class SistemaVida : MonoBehaviour
     public float MaxVida { get { return maxVida; } private set { maxVida = value; } }
     private float vidaAtual;
 
+    public float getVidaMaxima => maxVida;
+    public float getVidaAtual => vidaAtual;
+
     [Header("Interface e Visual")]
     [SerializeField] private TMP_Text textoVida;
     [SerializeField] private SpriteRenderer spriteRenderer; // Referência para a imagem do personagem
-    [SerializeField] private Color corDano = Color.red;     // Cor que ele pisca ao apanhar
+    [SerializeField] private Color corDano = Color.red;     // Cor que ele pisca ao tomar dano
     [SerializeField] private float tempoPiscar = 0.15f;
 
     [Header("Recompensas (Apenas Inimigos)")]
@@ -25,7 +28,7 @@ public class SistemaVida : MonoBehaviour
     private Color corOriginal = Color.white;
     public event Action OnDanoRecebido;
     
-    void Start()
+    void Awake() // Para resolver a condição de corrida entre o código da interface e do sistema de vida
     {
         vidaAtual = maxVida;
         anim = GetComponentInChildren<Animator>();
@@ -34,7 +37,10 @@ public class SistemaVida : MonoBehaviour
         {
             corOriginal = spriteRenderer.color;
         }
+    }
 
+    void Start()
+    {
         AtualizarTexto();
     }
 
@@ -46,6 +52,11 @@ public class SistemaVida : MonoBehaviour
         Debug.Log($"{gameObject.name} tomou {dano} de dano. Vida restante: {vidaAtual}");
 
         OnDanoRecebido?.Invoke();
+
+        if (gameObject.CompareTag("Player") && GerenciadorInterface.Instancia != null)
+        {
+            GerenciadorInterface.Instancia.AtualizarHUD();
+        }
 
         if (vidaAtual <= 0)
         {
@@ -79,6 +90,11 @@ public class SistemaVida : MonoBehaviour
 
         AtualizarTexto();
         Debug.Log($"{gameObject.name} curou {quantidade} de vida. Vida atual: {vidaAtual}");
+
+        if (gameObject.CompareTag("Player") && GerenciadorInterface.Instancia != null)
+        {
+            GerenciadorInterface.Instancia.AtualizarHUD();
+        }
     }
 
     public void AumentarVidaMaxima(float quantidadeBonus)

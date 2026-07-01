@@ -1,7 +1,6 @@
 using UnityEngine;
 using System.Collections;
 
-// Repare na herança aqui!
 public class DroneAtaqueProximidade : InimigoBase
 {
     [Header("Movimentação do Drone")]
