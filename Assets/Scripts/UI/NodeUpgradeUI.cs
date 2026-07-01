@@ -21,6 +21,7 @@ public class NodeUpgradeUI : MonoBehaviour
         imagemFundo = GetComponent<Image>();
         botaoPrincipal = GetComponent<Button>();
         botaoPrincipal.onClick.AddListener(AoClicar);
+        AtualizarVisual();
     }
 
     public void SetSelecionado(bool selecionado)

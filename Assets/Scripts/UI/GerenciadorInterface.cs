@@ -12,6 +12,9 @@ public class GerenciadorInterface : MonoBehaviour
     [Tooltip("Quantos pixels a barra deve ter para cada 1 ponto de vida? (Ex: 100)")]
     [SerializeField] private float multiplicadorLarguraVida = 100f;
 
+    [Header("Munição da Katana")]
+    [SerializeField] private Image[] slotsMunicao;
+
     [Header("Menus Ocultos")]
     [SerializeField] private GameObject painelPause;
     [SerializeField] private GameObject painelUpgrades;
@@ -20,7 +23,7 @@ public class GerenciadorInterface : MonoBehaviour
 
     private bool jogoPausado = false;
     private bool painelUpgradesAberto = false;
-    public bool IsPausado => jogoPausado;
+    public bool IsPausado => jogoPausado || painelUpgradesAberto;
 
     private void Awake()
     {
@@ -105,6 +108,14 @@ public class GerenciadorInterface : MonoBehaviour
         Debug.Log("Menu de Upgrades Fechado");
     }
 
+    public void VoltarParaMenuPrincipal()
+    {
+        Time.timeScale = 1f; // Descongela o tempo antes de sair
+        jogoPausado = false;
+        
+        SceneManager.LoadScene("MenuInicial"); 
+    }
+
     public void SairDoJogo()
     {
         Debug.Log("Saindo do jogo...");
@@ -115,6 +126,30 @@ public class GerenciadorInterface : MonoBehaviour
         #endif
     }
 
+    public void AtualizarMunicaoHUD(int municaoAtual, float progressoRecarga)
+    {
+        for (int i = 0; i < slotsMunicao.Length; i++)
+        {
+            if (slotsMunicao[i] == null) continue;
+
+            Color corOriginal = slotsMunicao[i].color;
+            if (i < municaoAtual) 
+            {
+                slotsMunicao[i].fillAmount = 1f;
+                slotsMunicao[i].color = new Color(corOriginal.r, corOriginal.g, corOriginal.b, 1f);
+            }
+            else if (i == municaoAtual) 
+            {
+                slotsMunicao[i].fillAmount = progressoRecarga;
+                slotsMunicao[i].color = new Color(corOriginal.r, corOriginal.g, corOriginal.b, 0.7f); 
+            }
+            else 
+            {
+                slotsMunicao[i].fillAmount = 0f; 
+                slotsMunicao[i].color = new Color(corOriginal.r, corOriginal.g, corOriginal.b, 0.2f);
+            }
+        }
+    }
     public void AtualizarHUD()
     {
         if (GerenciadorEvolucao.Instancia != null && textoDataNodes != null)
