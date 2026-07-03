@@ -1622,6 +1622,54 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
+    - target: {fileID: 4111675324538494773, guid: 884251a77b18f1c4cb36c2f085a01de9, type: 3}
+      propertyPath: somDash
+      value: 
+      objectReference: {fileID: 8300000, guid: 6cbc91126fb5c6d469ec50ef5ea93621, type: 3}
+    - target: {fileID: 4111675324538494773, guid: 884251a77b18f1c4cb36c2f085a01de9, type: 3}
+      propertyPath: somDummyDano
+      value: 
+      objectReference: {fileID: 8300000, guid: 62da759bcb9b2394c8b5bfd2692dc132, type: 3}
+    - target: {fileID: 4111675324538494773, guid: 884251a77b18f1c4cb36c2f085a01de9, type: 3}
+      propertyPath: somAbrirPainel
+      value: 
+      objectReference: {fileID: 8300000, guid: bd11a86a7d715894b9e2e1b7d14fe23b, type: 3}
+    - target: {fileID: 4111675324538494773, guid: 884251a77b18f1c4cb36c2f085a01de9, type: 3}
+      propertyPath: somDroneAtaque
+      value: 
+      objectReference: {fileID: 8300000, guid: 31fc819a96fdb6543b6b3259004c65f5, type: 3}
+    - target: {fileID: 4111675324538494773, guid: 884251a77b18f1c4cb36c2f085a01de9, type: 3}
+      propertyPath: somUpgradeArma
+      value: 
+      objectReference: {fileID: 8300000, guid: 761ec91046efd1844a5c4c358436b7ea, type: 3}
+    - target: {fileID: 4111675324538494773, guid: 884251a77b18f1c4cb36c2f085a01de9, type: 3}
+      propertyPath: somUpgradeDash
+      value: 
+      objectReference: {fileID: 8300000, guid: dd64eb9423e112c4dbbfe2e2cd95b377, type: 3}
+    - target: {fileID: 4111675324538494773, guid: 884251a77b18f1c4cb36c2f085a01de9, type: 3}
+      propertyPath: somUpgradeVida
+      value: 
+      objectReference: {fileID: 8300000, guid: f3840cecdfaedfe458e8f396979b9d4b, type: 3}
+    - target: {fileID: 4111675324538494773, guid: 884251a77b18f1c4cb36c2f085a01de9, type: 3}
+      propertyPath: somDanoRecebido
+      value: 
+      objectReference: {fileID: 8300000, guid: 9f626d14699fa6648814eaa27c1f2a40, type: 3}
+    - target: {fileID: 4111675324538494773, guid: 884251a77b18f1c4cb36c2f085a01de9, type: 3}
+      propertyPath: somFecharPainel
+      value: 
+      objectReference: {fileID: 8300000, guid: daccbdd190e644a4a9acd40c5d0b31af, type: 3}
+    - target: {fileID: 4111675324538494773, guid: 884251a77b18f1c4cb36c2f085a01de9, type: 3}
+      propertyPath: somBotaoVermelho
+      value: 
+      objectReference: {fileID: 8300000, guid: 7eb7d9bd72e275e4baa828a25dd4459a, type: 3}
+    - target: {fileID: 4111675324538494773, guid: 884251a77b18f1c4cb36c2f085a01de9, type: 3}
+      propertyPath: somComprarUpgrade
+      value: 
+      objectReference: {fileID: 8300000, guid: 761ec91046efd1844a5c4c358436b7ea, type: 3}
+    - target: {fileID: 7375073010122562714, guid: 884251a77b18f1c4cb36c2f085a01de9, type: 3}
+      propertyPath: m_Volume
+      value: 0.3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

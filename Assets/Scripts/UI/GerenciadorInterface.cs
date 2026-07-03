@@ -37,7 +37,6 @@ public class GerenciadorInterface : MonoBehaviour
     {
         if (painelPause != null) painelPause.SetActive(false);
         Time.timeScale = 1f;
-
         AtualizarHUD();
     }
 
@@ -45,49 +44,31 @@ public class GerenciadorInterface : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (painelUpgradesAberto)
-            {
-                FecharPainelUpgrades();
-            }
-            else
-            {
-                if (jogoPausado)
-                    ContinuarJogo();
-                else
-                    PausarJogo();
-            }
+            if (painelUpgradesAberto) FecharPainelUpgrades();
+            else if (jogoPausado) ContinuarJogo();
+            else PausarJogo();
         }
 
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (Input.GetKeyDown(KeyCode.Tab) && !jogoPausado)
         {
-            if (!jogoPausado)
-            {
-                if (painelUpgradesAberto)
-                    FecharPainelUpgrades();
-                else
-                    AbrirPainelUpgrades();
-            }
+            if (painelUpgradesAberto) FecharPainelUpgrades();
+            else AbrirPainelUpgrades();
         }
     }
 
     public void PausarJogo()
     {
         if (painelUpgradesAberto) return;
-
         jogoPausado = true;
         if (painelPause != null) painelPause.SetActive(true);
-        
-        Time.timeScale = 0f; 
-        Debug.Log("Jogo Pausado");
+        Time.timeScale = 0f;
     }
 
     public void ContinuarJogo()
     {
         jogoPausado = false;
         if (painelPause != null) painelPause.SetActive(false);
-        
-        Time.timeScale = 1f; 
-        Debug.Log("Jogo Retomado");
+        Time.timeScale = 1f;
     }
 
     public void AbrirPainelUpgrades()
@@ -95,8 +76,10 @@ public class GerenciadorInterface : MonoBehaviour
         painelUpgradesAberto = true;
         if (painelUpgrades != null) painelUpgrades.SetActive(true);
         
+        if (AudioManager.Instancia != null)
+            AudioManager.Instancia.TocarSFX(AudioManager.Instancia.somAbrirPainel);
+
         Time.timeScale = 0f;
-        Debug.Log("Menu de Upgrades Aberto");
     }
 
     public void FecharPainelUpgrades()
@@ -104,21 +87,27 @@ public class GerenciadorInterface : MonoBehaviour
         painelUpgradesAberto = false;
         if (painelUpgrades != null) painelUpgrades.SetActive(false);
 
-        Time.timeScale = 1f; 
-        Debug.Log("Menu de Upgrades Fechado");
+        if (AudioManager.Instancia != null)
+            AudioManager.Instancia.TocarSFX(AudioManager.Instancia.somFecharPainel);
+
+        Time.timeScale = 1f;
     }
 
     public void VoltarParaMenuPrincipal()
     {
-        Time.timeScale = 1f; // Descongela o tempo antes de sair
+        if (AudioManager.Instancia != null)
+            AudioManager.Instancia.TocarSFX(AudioManager.Instancia.somBotaoVermelho);
+
+        Time.timeScale = 1f;
         jogoPausado = false;
-        
-        SceneManager.LoadScene("MenuInicial"); 
+        SceneManager.LoadScene("MenuInicial");
     }
 
     public void SairDoJogo()
     {
-        Debug.Log("Saindo do jogo...");
+        if (AudioManager.Instancia != null)
+            AudioManager.Instancia.TocarSFX(AudioManager.Instancia.somBotaoVermelho);
+
         #if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false;
         #else
@@ -154,7 +143,7 @@ public class GerenciadorInterface : MonoBehaviour
     {
         if (GerenciadorEvolucao.Instancia != null && textoDataNodes != null)
         {
-            textoDataNodes.text = $"Data-Nodes: {GerenciadorEvolucao.Instancia.dataNodesColetados:D3}"; 
+            textoDataNodes.text = $"Data-Nodes: {GerenciadorEvolucao.Instancia.dataNodesColetados:D3}";
         }
 
         GameObject player = GameObject.FindGameObjectWithTag("Player");
@@ -169,6 +158,7 @@ public class GerenciadorInterface : MonoBehaviour
                 RectTransform rectBarra = sliderVida.GetComponent<RectTransform>();
                 if (rectBarra != null)
                 {
+                    // A correção de segurança foi feita aqui: mantendo a escala proporcional
                     rectBarra.sizeDelta = new Vector2(vida.getVidaMaxima * multiplicadorLarguraVida, rectBarra.sizeDelta.y);
                 }
             }

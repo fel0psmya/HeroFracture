@@ -23,7 +23,7 @@ public class MenuPrincipal : MonoBehaviour
     public void SairDoJogo()
     {
         if (AudioManager.Instancia != null) {
-            AudioManager.Instancia.TocarSFX(AudioManager.Instancia.somBotao);
+            AudioManager.Instancia.TocarSFX(AudioManager.Instancia.somBotaoVermelho);
         }
         
         Debug.Log("Fechando o jogo...");

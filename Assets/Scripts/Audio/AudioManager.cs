@@ -23,13 +23,23 @@ public class AudioManager : MonoBehaviour
 
     [Header("Efeitos Sonoros - Inimigos e Ambiente")]
     public AudioClip somDroneExplosao;
+    public AudioClip somDroneAtaque;
     public AudioClip somDisparoProjetil;
     public AudioClip somCaixaQuebrando;
+    public AudioClip somDummyDano;
     
     [Header("Efeitos Sonoros - Itens e UI")]
     public AudioClip somPegarCura;
     public AudioClip somPegarDataNode;
     public AudioClip somBotao;
+    public AudioClip somBotaoVermelho;
+    
+    [Header("Efeitos Sonoros - Tela de Upgrade")]
+    public AudioClip somAbrirPainel;
+    public AudioClip somFecharPainel;
+    public AudioClip somUpgradeArma;
+    public AudioClip somUpgradeDash;
+    public AudioClip somUpgradeVida;
 
     private void Awake()
     {
@@ -57,6 +67,7 @@ public class AudioManager : MonoBehaviour
     {
         musicaSource.Stop();
     }
+    
     public void TocarSFX(AudioClip clip)
     {
         if (clip != null)
@@ -64,6 +75,7 @@ public class AudioManager : MonoBehaviour
             sfxSource.PlayOneShot(clip);
         }
     }
+    
     public void TocarSFX(AudioClip clip, float volume)
     {
         if (clip != null)
