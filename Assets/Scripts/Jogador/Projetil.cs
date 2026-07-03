@@ -11,6 +11,11 @@ public class Projetil : MonoBehaviour
     {
         camadaChao = LayerMask.NameToLayer("Ground");
         Destroy(gameObject, tempoVidaMaximo);
+
+        if (AudioManager.Instancia != null)
+        {
+            AudioManager.Instancia.TocarSFX(AudioManager.Instancia.somDisparoProjetil);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D colisor)

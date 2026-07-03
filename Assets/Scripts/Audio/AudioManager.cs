@@ -1,0 +1,94 @@
+using UnityEngine;
+
+public class AudioManager : MonoBehaviour
+{
+    public static AudioManager Instancia { get; private set; }
+
+    [Header("Fontes de Áudio")]
+    [Tooltip("Arraste o AudioSource destinado à música de fundo aqui")]
+    [SerializeField] private AudioSource musicaSource;
+    
+    [Tooltip("Arraste o AudioSource destinado aos efeitos sonoros aqui")]
+    [SerializeField] private AudioSource sfxSource;
+
+    [Header("Músicas")]
+    public AudioClip musicaMenu;
+    public AudioClip musicaFase;
+    public AudioClip musicaBoss;
+
+    [Header("Efeitos Sonoros - Jogador")]
+    public AudioClip somAtaque;
+    public AudioClip somDash;
+    public AudioClip somDanoRecebido;
+    public AudioClip somPassos;
+    public AudioClip somMorteJogador;
+    public AudioClip somPulo;
+
+    [Header("Efeitos Sonoros - Inimigos e Ambiente")]
+    public AudioClip somDroneExplosao;
+    public AudioClip somDroneAtaque;
+    public AudioClip somDisparoProjetil;
+    public AudioClip somCaixaQuebrando;
+    public AudioClip somDummyDano;
+    
+    [Header("Efeitos Sonoros - Itens e UI")]
+    public AudioClip somPegarCura;
+    public AudioClip somPegarDataNode;
+    public AudioClip somBotao;
+    public AudioClip somBotaoVermelho;
+    
+    [Header("Efeitos Sonoros - Tela de Upgrade")]
+    public AudioClip somAbrirPainel;
+    public AudioClip somFecharPainel;
+    public AudioClip somUpgradeArma;
+    public AudioClip somUpgradeDash;
+    public AudioClip somUpgradeVida;
+
+    private void Awake()
+    {
+        if (Instancia != null && Instancia != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instancia = this;
+        
+        DontDestroyOnLoad(gameObject); 
+    }
+
+    public void TocarMusica(AudioClip musica)
+    {
+        if (musicaSource.clip == musica) return;
+
+        musicaSource.clip = musica;
+        musicaSource.loop = true;
+        musicaSource.Play();
+    }
+
+    public void PararMusica()
+    {
+        musicaSource.Stop();
+    }
+    
+    public void TocarSFX(AudioClip clip)
+    {
+        if (clip != null)
+        {
+            sfxSource.PlayOneShot(clip);
+        }
+    }
+    
+    public void TocarSFX(AudioClip clip, float volume)
+    {
+        if (clip != null)
+        {
+            sfxSource.PlayOneShot(clip, volume);
+        }
+    }
+    public void PararTudo()
+    {
+        sfxSource.Stop();
+        musicaSource.Stop();
+    }
+}
