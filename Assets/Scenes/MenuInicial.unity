@@ -1392,7 +1392,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: FaseDeTestes
+          m_StringArgument: Lab
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1806739728
@@ -1629,11 +1629,11 @@ PrefabInstance:
     - target: {fileID: 4111675324538494773, guid: 884251a77b18f1c4cb36c2f085a01de9, type: 3}
       propertyPath: somPulo
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: 0e332413070ad2c4ea03094081ba7279, type: 3}
     - target: {fileID: 4111675324538494773, guid: 884251a77b18f1c4cb36c2f085a01de9, type: 3}
       propertyPath: somPassos
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: 3cc81b84790435b43bd464efa95f933e, type: 3}
     - target: {fileID: 4111675324538494773, guid: 884251a77b18f1c4cb36c2f085a01de9, type: 3}
       propertyPath: somDummyDano
       value: 
@@ -1669,7 +1669,7 @@ PrefabInstance:
     - target: {fileID: 4111675324538494773, guid: 884251a77b18f1c4cb36c2f085a01de9, type: 3}
       propertyPath: somMorteJogador
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: 56634b66f11bf1143a6236c34b38af2f, type: 3}
     - target: {fileID: 4111675324538494773, guid: 884251a77b18f1c4cb36c2f085a01de9, type: 3}
       propertyPath: somBotaoVermelho
       value: 
