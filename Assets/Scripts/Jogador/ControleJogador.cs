@@ -11,6 +11,8 @@ public class ControleJogador : MonoBehaviour
     public Vector2 tamanhoChecador = new Vector2(0.5f, 0.1f);
     public LayerMask camadaChao;
     private bool estaNoChao;
+    private float timerPassos;
+    private float intervaloPassos = 0.4f;
 
     private Rigidbody2D rb;
     private Animator anim;
@@ -28,7 +30,6 @@ public class ControleJogador : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (EstaBloqueadoPeloDash()) return;
@@ -38,6 +39,25 @@ public class ControleJogador : MonoBehaviour
         if(Input.GetButtonDown("Jump") && estaNoChao)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, forcaPulo);
+            
+            if (AudioManager.Instancia != null)
+                AudioManager.Instancia.TocarSFX(AudioManager.Instancia.somPulo);
+        }
+
+        if (movimentoHorizontal != 0 && estaNoChao)
+        {
+            timerPassos -= Time.deltaTime;
+            if (timerPassos <= 0)
+            {
+                if (AudioManager.Instancia != null)
+                    AudioManager.Instancia.TocarSFX(AudioManager.Instancia.somPassos);
+                
+                timerPassos = intervaloPassos;
+            }
+        }
+        else
+        {
+            timerPassos = 0;
         }
 
         AjustarDirecaoSprite();

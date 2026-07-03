@@ -137,9 +137,15 @@ public class SistemaVida : MonoBehaviour
     {
         if (AudioManager.Instancia != null)
         {
-            if (gameObject.CompareTag("Inimigo")) // Certifique-se de que a tag dos drones/inimigos é "Inimigo"
+            AudioManager.Instancia.PararTudo();
+
+            if (gameObject.CompareTag("Player"))
             {
-                AudioManager.Instancia.TocarSFX(AudioManager.Instancia.somDroneExplosao);
+                AudioManager.Instancia.TocarSFX(AudioManager.Instancia.somMorteJogador, 0.7f);
+            }
+            else if (gameObject.CompareTag("Inimigo")) 
+            {
+                AudioManager.Instancia.TocarSFX(AudioManager.Instancia.somDroneExplosao, 0.7f);
             }
         }
 

@@ -20,6 +20,9 @@ public class AudioManager : MonoBehaviour
     public AudioClip somAtaque;
     public AudioClip somDash;
     public AudioClip somDanoRecebido;
+    public AudioClip somPassos;
+    public AudioClip somMorteJogador;
+    public AudioClip somPulo;
 
     [Header("Efeitos Sonoros - Inimigos e Ambiente")]
     public AudioClip somDroneExplosao;
@@ -82,5 +85,10 @@ public class AudioManager : MonoBehaviour
         {
             sfxSource.PlayOneShot(clip, volume);
         }
+    }
+    public void PararTudo()
+    {
+        sfxSource.Stop();
+        musicaSource.Stop();
     }
 }
