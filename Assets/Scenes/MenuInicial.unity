@@ -1627,6 +1627,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 6cbc91126fb5c6d469ec50ef5ea93621, type: 3}
     - target: {fileID: 4111675324538494773, guid: 884251a77b18f1c4cb36c2f085a01de9, type: 3}
+      propertyPath: somPulo
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4111675324538494773, guid: 884251a77b18f1c4cb36c2f085a01de9, type: 3}
+      propertyPath: somPassos
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4111675324538494773, guid: 884251a77b18f1c4cb36c2f085a01de9, type: 3}
       propertyPath: somDummyDano
       value: 
       objectReference: {fileID: 8300000, guid: 62da759bcb9b2394c8b5bfd2692dc132, type: 3}
@@ -1658,6 +1666,10 @@ PrefabInstance:
       propertyPath: somFecharPainel
       value: 
       objectReference: {fileID: 8300000, guid: daccbdd190e644a4a9acd40c5d0b31af, type: 3}
+    - target: {fileID: 4111675324538494773, guid: 884251a77b18f1c4cb36c2f085a01de9, type: 3}
+      propertyPath: somMorteJogador
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4111675324538494773, guid: 884251a77b18f1c4cb36c2f085a01de9, type: 3}
       propertyPath: somBotaoVermelho
       value: 

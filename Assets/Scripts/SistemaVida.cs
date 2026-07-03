@@ -85,7 +85,6 @@ public class SistemaVida : MonoBehaviour
     {
         vidaAtual -= danoRecebido;
 
-        // LOG DO DANO MANTIDO PARA VOCÊ TESTAR
         Debug.Log(">>> " + gameObject.name + " tomou " + danoRecebido + " de DANO! Vida atual: " + vidaAtual + " <<<");
 
         if (OnDanoRecebido != null) OnDanoRecebido.Invoke();
