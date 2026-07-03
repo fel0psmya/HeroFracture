@@ -20,6 +20,16 @@ public class MenuPrincipal : MonoBehaviour
         SceneManager.LoadScene(nomeDaCenaPrimeiraFase);
     }
 
+    public void FaseDeTeste(string nomeDaCenaFaseDeTeste)
+    {
+        if (AudioManager.Instancia != null){
+            AudioManager.Instancia.TocarSFX(AudioManager.Instancia.somBotao);
+        }
+
+        Time.timeScale = 1f; 
+        SceneManager.LoadScene(nomeDaCenaFaseDeTeste);
+    }
+
     public void SairDoJogo()
     {
         if (AudioManager.Instancia != null) {
