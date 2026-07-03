@@ -4,7 +4,6 @@ using System;
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-
 public class SistemaVida : MonoBehaviour
 {
     [Header("Configurações de Vida")]
@@ -17,8 +16,8 @@ public class SistemaVida : MonoBehaviour
 
     [Header("Interface e Visual")]
     [SerializeField] private TMP_Text textoVida;
-    [SerializeField] private SpriteRenderer spriteRenderer; // Referência para a imagem do personagem
-    [SerializeField] private Color corDano = Color.red;     // Cor que ele pisca ao tomar dano
+    [SerializeField] private SpriteRenderer spriteRenderer; 
+    [SerializeField] private Color corDano = Color.red;     
     [SerializeField] private float tempoPiscar = 0.15f;
 
     [Header("Recompensas (Apenas Inimigos)")]
@@ -27,8 +26,9 @@ public class SistemaVida : MonoBehaviour
     private Animator anim;
     private Color corOriginal = Color.white;
     public event Action OnDanoRecebido;
+    public event Action OnMorte;
     
-    void Awake() // Para resolver a condição de corrida entre o código da interface e do sistema de vida
+    void Awake() 
     {
         vidaAtual = maxVida;
         anim = GetComponentInChildren<Animator>();
@@ -41,94 +41,82 @@ public class SistemaVida : MonoBehaviour
 
     void Start()
     {
-        AtualizarTexto();
+        if (gameObject.CompareTag("Player") && GerenciadorInterface.Instancia != null)
+        {
+            GerenciadorInterface.Instancia.AtualizarHUD();
+        }
     }
 
-    public void TomarDano(float dano)
+    public void AumentarVidaMaxima(float bonusVida)
     {
-        vidaAtual -= dano;
-        vidaAtual = Mathf.Max(vidaAtual, 0); // Impede a vida de mostrar valores negativos
-        AtualizarTexto();
-        Debug.Log($"{gameObject.name} tomou {dano} de dano. Vida restante: {vidaAtual}");
-
-        OnDanoRecebido?.Invoke();
+        maxVida += bonusVida;
+        vidaAtual += bonusVida; 
 
         if (gameObject.CompareTag("Player") && GerenciadorInterface.Instancia != null)
         {
             GerenciadorInterface.Instancia.AtualizarHUD();
+        }
+    }
+
+    public void Curar(float quantidadeCura)
+    {
+        vidaAtual += quantidadeCura;
+        
+        if (vidaAtual > maxVida)
+        {
+            vidaAtual = maxVida;
+        }
+
+        if (gameObject.CompareTag("Player") && GerenciadorInterface.Instancia != null)
+        {
+            GerenciadorInterface.Instancia.AtualizarHUD();
+        }
+    }
+
+    public void TomarDano(float danoRecebido)
+    {
+        vidaAtual -= danoRecebido;
+
+        // LOG DO DANO MANTIDO PARA VOCÊ TESTAR
+        Debug.Log(">>> " + gameObject.name + " tomou " + danoRecebido + " de DANO! Vida atual: " + vidaAtual + " <<<");
+
+        if (OnDanoRecebido != null) OnDanoRecebido.Invoke();
+
+        if (spriteRenderer != null)
+        {
+            StartCoroutine(EfeitoDano());
+        }
+
+        if (gameObject.CompareTag("Player") && GerenciadorInterface.Instancia != null)
+        {
+            GerenciadorInterface.Instancia.AtualizarHUD();
+        }
+
+        if (textoVida != null)
+        {
+            textoVida.text = vidaAtual.ToString("F2");
         }
 
         if (vidaAtual <= 0)
         {
-            AtualizarTexto();
             Morrer();
         }
-        else
-        {
-            if (TemParametro(anim, "tomouDano"))
-            {
-                anim.SetTrigger("tomouDano");
-            }
-            if (spriteRenderer != null)
-            {
-                StartCoroutine(PiscarEfeitoDano());
-            }
-        }
     }
 
-    public void Curar(float quantidade)
-    {
-        if (vidaAtual <= 0) return; 
-
-        vidaAtual += quantidade;
-        vidaAtual = Mathf.Min(vidaAtual, maxVida);
-        
-        if (spriteRenderer != null)
-        {
-            StartCoroutine(PiscarEfeitoCura());
-        }
-
-        AtualizarTexto();
-        Debug.Log($"{gameObject.name} curou {quantidade} de vida. Vida atual: {vidaAtual}");
-
-        if (gameObject.CompareTag("Player") && GerenciadorInterface.Instancia != null)
-        {
-            GerenciadorInterface.Instancia.AtualizarHUD();
-        }
-    }
-
-    public void AumentarVidaMaxima(float quantidadeBonus)
-    {
-        maxVida += quantidadeBonus;
-        Curar(quantidadeBonus); 
-    }
-
-    private IEnumerator PiscarEfeitoDano()
+    private IEnumerator EfeitoDano()
     {
         spriteRenderer.color = corDano;
         yield return new WaitForSeconds(tempoPiscar);
         spriteRenderer.color = corOriginal;
     }
 
-    private IEnumerator PiscarEfeitoCura()
-    {
-        spriteRenderer.color = Color.green;
-        yield return new WaitForSeconds(tempoPiscar);
-        spriteRenderer.color = corOriginal;
-    }
-
-    private void AtualizarTexto()
-    {
-        if (textoVida != null)
-        {
-            // "F2" faz mostrar apenas 2 casas decimais (ex: 5.09, 4.52, 0.01)
-            textoVida.text = vidaAtual.ToString("F2"); 
-        }
-    }
     private void Morrer()
     {
-        if (spriteRenderer != null) spriteRenderer.color = corOriginal;
+        Debug.Log(gameObject.name + " MORREU!");
 
+        if (OnMorte != null) OnMorte.Invoke();
+
+        // Desativa os outros scripts para o inimigo/boss parar de atacar
         MonoBehaviour[] scripts = GetComponents<MonoBehaviour>();
         foreach (MonoBehaviour script in scripts)
         {
@@ -138,7 +126,6 @@ public class SistemaVida : MonoBehaviour
         if (anim != null)
         {
             anim.SetBool("isDead", true);
-            anim.Play("Death");
             StartCoroutine(RotinaDestruicao());
         }
         else
@@ -162,7 +149,6 @@ public class SistemaVida : MonoBehaviour
         if (gameObject.CompareTag("Player"))
         {
             yield return new WaitForSeconds(1.5f);
-            
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
         else
@@ -172,19 +158,16 @@ public class SistemaVida : MonoBehaviour
                 Instantiate(prefabDrop, transform.position, Quaternion.identity);
             }
             yield return new WaitForSeconds(0.6f);
-            Destroy(gameObject);
+            Destroy(gameObject); // Chefe/Inimigo some aqui
         }
     }
 
     private bool TemParametro(Animator animator, string nomeParametro)
-{
-    foreach (AnimatorControllerParameter param in animator.parameters)
     {
-        if (param.name == nomeParametro) 
+        foreach (AnimatorControllerParameter param in animator.parameters)
         {
-            return true;
+            if (param.name == nomeParametro) return true;
         }
+        return false;
     }
-    return false;
-}
 }
