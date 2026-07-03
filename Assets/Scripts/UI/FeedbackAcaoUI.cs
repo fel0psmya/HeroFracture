@@ -70,6 +70,11 @@ public class FeedbackTeclaUI : MonoBehaviour
     private void AtivarFeedback()
     {
         if (textoElemento != null) textoElemento.color = corPressionado;
+        
+        if (AudioManager.Instancia != null)
+        {
+            AudioManager.Instancia.TocarSFX(AudioManager.Instancia.somBotao);
+        }
     }
 
     private void DesativarFeedback()

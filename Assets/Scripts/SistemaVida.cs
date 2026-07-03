@@ -53,6 +53,14 @@ public class SistemaVida : MonoBehaviour
 
         OnDanoRecebido?.Invoke();
 
+        if (AudioManager.Instancia != null)
+        {
+            if (gameObject.CompareTag("Player"))
+            {
+                AudioManager.Instancia.TocarSFX(AudioManager.Instancia.somDanoRecebido);
+            }
+        }
+
         if (gameObject.CompareTag("Player") && GerenciadorInterface.Instancia != null)
         {
             GerenciadorInterface.Instancia.AtualizarHUD();
@@ -127,6 +135,14 @@ public class SistemaVida : MonoBehaviour
     }
     private void Morrer()
     {
+        if (AudioManager.Instancia != null)
+        {
+            if (gameObject.CompareTag("Inimigo")) // Certifique-se de que a tag dos drones/inimigos é "Inimigo"
+            {
+                AudioManager.Instancia.TocarSFX(AudioManager.Instancia.somDroneExplosao);
+            }
+        }
+
         if (spriteRenderer != null) spriteRenderer.color = corOriginal;
 
         MonoBehaviour[] scripts = GetComponents<MonoBehaviour>();

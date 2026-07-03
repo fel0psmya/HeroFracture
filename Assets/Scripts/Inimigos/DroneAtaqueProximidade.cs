@@ -85,6 +85,11 @@ public class DroneAtaqueProximidade : InimigoBase
 
         if (anim != null) anim.SetTrigger("atacar");
 
+        if (AudioManager.Instancia != null)
+        {
+            AudioManager.Instancia.TocarSFX(AudioManager.Instancia.somDisparoProjetil); 
+        }
+
         Vector2 centroJogador = new Vector2(alvoJogador.position.x, alvoJogador.position.y + 1f);
         Vector2 direcaoAtaque = (centroJogador - (Vector2)transform.position).normalized;
 

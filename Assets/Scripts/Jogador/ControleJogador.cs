@@ -22,6 +22,10 @@ public class ControleJogador : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         dash = GetComponent<DashJogador>();
+
+        if (AudioManager.Instancia != null && AudioManager.Instancia.musicaFase != null) {
+            AudioManager.Instancia.TocarMusica(AudioManager.Instancia.musicaFase);
+        }
     }
 
     // Update is called once per frame
