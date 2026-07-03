@@ -27,6 +27,12 @@ public class ObjetoQuebravel : MonoBehaviour
         if (anim != null) anim.SetTrigger("quebrar");
 
         CalcularDrop();
+
+        if (AudioManager.Instancia != null)
+        {
+            AudioManager.Instancia.TocarSFX(AudioManager.Instancia.somCaixaQuebrando);
+        }
+        
         Destroy(gameObject, 0.5f);
     }
 

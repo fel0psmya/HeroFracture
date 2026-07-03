@@ -18,6 +18,8 @@ public class ControleJogador : MonoBehaviour
     public Vector2 tamanhoChecador = new Vector2(0.5f, 0.1f);
     public LayerMask camadaChao;
     private bool estaNoChao;
+    private float timerPassos;
+    private float intervaloPassos = 0.4f;
 
     private Rigidbody2D rb;
     private Animator anim;
@@ -32,6 +34,10 @@ public class ControleJogador : MonoBehaviour
         
         // Salva a gravidade padrão (geralmente 1 ou algo parecido) para restaurar depois da escada
         gravidadeOriginal = rb.gravityScale; 
+
+        if (AudioManager.Instancia != null && AudioManager.Instancia.musicaFase != null) {
+            AudioManager.Instancia.TocarMusica(AudioManager.Instancia.musicaFase);
+        }
     }
 
     void Update()
@@ -50,6 +56,25 @@ public class ControleJogador : MonoBehaviour
         if(Input.GetButtonDown("Jump") && estaNoChao && !escalando)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, forcaPulo);
+            
+            if (AudioManager.Instancia != null)
+                AudioManager.Instancia.TocarSFX(AudioManager.Instancia.somPulo);
+        }
+
+        if (movimentoHorizontal != 0 && estaNoChao)
+        {
+            timerPassos -= Time.deltaTime;
+            if (timerPassos <= 0)
+            {
+                if (AudioManager.Instancia != null)
+                    AudioManager.Instancia.TocarSFX(AudioManager.Instancia.somPassos);
+                
+                timerPassos = intervaloPassos;
+            }
+        }
+        else
+        {
+            timerPassos = 0;
         }
 
         AjustarDirecaoSprite();
