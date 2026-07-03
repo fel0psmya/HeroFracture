@@ -31,6 +31,8 @@ public class NodeUpgradeUI : MonoBehaviour
 
     public void AtualizarVisual()
     {
+        if (imagemFundo == null) imagemFundo = GetComponent<Image>();
+
         if (upgradeData == null || GerenciadorEvolucao.Instancia == null) return;
 
         bool jaComprado = GerenciadorEvolucao.Instancia.upgradesComprados.Contains(upgradeData.idUnico);
