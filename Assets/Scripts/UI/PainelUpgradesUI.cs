@@ -17,8 +17,8 @@ public class PainelUpgradesUI : MonoBehaviour
     [SerializeField] private Image fundoBotaoComprar;
 
     [Header("Cores do Botão de Compra")]
-    [SerializeField] private Color corBotaoAtivo = new Color(0.2f, 0.5f, 0.8f); // Azul
-    [SerializeField] private Color corBotaoInativo = new Color(0.4f, 0.4f, 0.4f); // Cinza
+    [SerializeField] private Color corBotaoAtivo = new Color(0.2f, 0.5f, 0.8f); 
+    [SerializeField] private Color corBotaoInativo = new Color(0.4f, 0.4f, 0.4f); 
 
     private NodeUpgradeUI nodeSelecionadoAtual;
 
@@ -47,6 +47,7 @@ public class PainelUpgradesUI : MonoBehaviour
             textoDataNodesMenu.text = $"Data-Nodes: {GerenciadorEvolucao.Instancia.dataNodesColetados:D3}";
         }
     }
+
     public void SelecionarUpgrade(NodeUpgradeUI node)
     {
         if (nodeSelecionadoAtual != null) nodeSelecionadoAtual.SetSelecionado(false);
@@ -123,6 +124,25 @@ public class PainelUpgradesUI : MonoBehaviour
     {
         if (nodeSelecionadoAtual != null && GerenciadorEvolucao.Instancia != null)
         {
+            bool temDinheiro = GerenciadorEvolucao.Instancia.dataNodesColetados >= nodeSelecionadoAtual.upgradeData.custoDataNodes;
+            bool jaComprado = GerenciadorEvolucao.Instancia.upgradesComprados.Contains(nodeSelecionadoAtual.upgradeData.idUnico);
+            
+            if (temDinheiro && !jaComprado && AudioManager.Instancia != null)
+            {
+                switch (nodeSelecionadoAtual.upgradeData.tipoEfeito)
+                {
+                    case TipoUpgrade.PotenciaLamina:
+                        AudioManager.Instancia.TocarSFX(AudioManager.Instancia.somUpgradeArma);
+                        break;
+                    case TipoUpgrade.EficienciaDash:
+                        AudioManager.Instancia.TocarSFX(AudioManager.Instancia.somUpgradeDash);
+                        break;
+                    case TipoUpgrade.IntegridadeMemoria:
+                        AudioManager.Instancia.TocarSFX(AudioManager.Instancia.somUpgradeVida);
+                        break;
+                }
+            }
+
             GerenciadorEvolucao.Instancia.TentarComprarUpgrade(nodeSelecionadoAtual.upgradeData);
             
             AtualizarTextoDataNodesMenu();

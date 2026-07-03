@@ -57,6 +57,10 @@ public class DashJogador : MonoBehaviour
 
         anim.SetTrigger("dash");
 
+        if (AudioManager.Instancia != null) {
+            AudioManager.Instancia.TocarSFX(AudioManager.Instancia.somDash);
+        }
+
         if (spriteRenderer != null) spriteRenderer.color = corDoDash;
 
         float gravidadeOriginal = rb.gravityScale;

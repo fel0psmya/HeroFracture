@@ -14,6 +14,12 @@ public class ItemCura : MonoBehaviour
             if (vidaJogador != null)
             {
                 vidaJogador.Curar(quantidadeCura);                
+                
+                if (AudioManager.Instancia != null) 
+                {
+                    AudioManager.Instancia.TocarSFX(AudioManager.Instancia.somPegarCura);
+                }
+
                 Destroy(gameObject);
             }
         }

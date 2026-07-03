@@ -10,8 +10,16 @@ public class Coletavel : MonoBehaviour
             if (status != null)
             {
                 status.AdicionarDataNode();
+                
+                if (AudioManager.Instancia != null)
+                {
+                    AudioManager.Instancia.TocarSFX(AudioManager.Instancia.somPegarDataNode);
+                }
+                
                 Destroy(gameObject);
-            } else {
+            } 
+            else 
+            {
                 Debug.LogWarning("Bateu no Player, mas o script 'GerenciadorEvolucao' não foi encontrado no objeto ou nos pais!");
             }
         }

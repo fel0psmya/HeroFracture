@@ -52,6 +52,14 @@ public class SistemaVida : MonoBehaviour
         maxVida += bonusVida;
         vidaAtual += bonusVida; 
 
+        if (AudioManager.Instancia != null)
+        {
+            if (gameObject.CompareTag("Player"))
+            {
+                AudioManager.Instancia.TocarSFX(AudioManager.Instancia.somDanoRecebido);
+            }
+        }
+
         if (gameObject.CompareTag("Player") && GerenciadorInterface.Instancia != null)
         {
             GerenciadorInterface.Instancia.AtualizarHUD();
@@ -113,8 +121,23 @@ public class SistemaVida : MonoBehaviour
     private void Morrer()
     {
         Debug.Log(gameObject.name + " MORREU!");
-
         if (OnMorte != null) OnMorte.Invoke();
+        
+        if (AudioManager.Instancia != null)
+        {
+            AudioManager.Instancia.PararTudo();
+
+            if (gameObject.CompareTag("Player"))
+            {
+                AudioManager.Instancia.TocarSFX(AudioManager.Instancia.somMorteJogador, 0.7f);
+            }
+            else if (gameObject.CompareTag("Inimigo")) 
+            {
+                AudioManager.Instancia.TocarSFX(AudioManager.Instancia.somDroneExplosao, 0.7f);
+            }
+        }
+
+        if (spriteRenderer != null) spriteRenderer.color = corOriginal;
 
         // Desativa os outros scripts para o inimigo/boss parar de atacar
         MonoBehaviour[] scripts = GetComponents<MonoBehaviour>();

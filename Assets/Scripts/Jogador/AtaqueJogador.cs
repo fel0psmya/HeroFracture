@@ -53,6 +53,10 @@ public class AtaqueJogador : MonoBehaviour
         anim.SetTrigger("attack");
         Debug.Log($"Energia Restante: {municaoAtual}/{maxMunicao}");
 
+        if (AudioManager.Instancia != null) {
+            AudioManager.Instancia.TocarSFX(AudioManager.Instancia.somAtaque);
+        }
+
         ChamarAtualizarHUD();
     }
 
