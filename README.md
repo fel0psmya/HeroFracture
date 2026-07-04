@@ -1,6 +1,6 @@
 # HeroFracture
 
-**[Versão 0.1-alpha](https://github.com/fel0psmya/HeroFracture/releases)**
+**Releases:** [Baixe o jogo aqui!](https://github.com/fel0psmya/HeroFracture/releases)
 
 ---
 
