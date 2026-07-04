@@ -1,6 +1,8 @@
 # HeroFracture
 
-**Game Design Document (GDD)**
+**[Versão 0.1-alpha](https://github.com/fel0psmya/HeroFracture/releases)**
+
+---
 
 *Desenvolvido em Unity versão 6000.4.1f1*
 
@@ -13,7 +15,6 @@
   - José Wagner Marques Fernandes Junior
   - Gabriel Alves
   - Josias Batista
-  - Juan Pimentel
   - Felipe Maia
 - **Plataforma:** PC (Desenvolvido em Unity)
 - **Gênero:** Runner Gun / Ação e Combate 2D
