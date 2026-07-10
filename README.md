@@ -1,89 +1,91 @@
 # HeroFracture
 
-**Releases:** [Baixe o jogo aqui!](https://github.com/fel0psmya/HeroFracture/releases)
+[🇧🇷 Leia em Português (PT-BR)](README_PT_BR.md)
+
+**Releases:** [Download the game here!](https://github.com/fel0psmya/HeroFracture/releases)
 
 ---
 
-*Desenvolvido em Unity versão 6000.4.1f1*
+*Developed in Unity version 6000.4.1f1*
 
 ---
 
-## 1. Identidade e Equipe Técnica
+## 1. Identity and Technical Team
 
-- **Título do Jogo:** HeroFracture
-- **Equipe de Desenvolvimento:**
+- **Game Title:** HeroFracture
+- **Development Team:**
   - José Wagner Marques Fernandes Junior
   - Gabriel Alves
   - Josias Batista
   - Felipe Maia
-- **Plataforma:** PC (Desenvolvido em Unity)
-- **Gênero:** Runner Gun / Ação e Combate 2D
+- **Platform:** PC (Developed in Unity)
+- **Genre:** Run and Gun / 2D Action and Combat
 
 ---
 
-## 2. Sobre o Jogo
+## 2. About the Game
 
-- **Resumo:** Jogo de plataforma focado na fuga de um herói do passado de uma instalação cyberpunk futurista.
-- **Sentimentos Evocados:** Excitação, competitividade, frustração estratégica e euforia ao realizar melhorias e vencer chefes.
-- **Estratégia Central:** Escapar da Fracture Tech, recuperar a consciência e usar tecnologia roubada para evoluir as habilidades do herói.
+- **Summary:** A platform game focused on the escape of a hero from the past from a futuristic cyberpunk facility.
+- **Evoked Feelings:** Excitement, competitiveness, strategic frustration, and euphoria upon making upgrades and defeating bosses.
+- **Core Strategy:** Escape Fracture Tech, recover consciousness, and use stolen technology to evolve the hero's abilities.
 
 ---
 
 ## 3. Storyline
 
-A megacorporação **Fracture Tech** utiliza fendas temporais para sequestrar heróis de diversas eras, submetendo-os a uma lavagem cerebral para transformá-los em armas biônicas sob seu controle. O Samurai protagonista consegue despertar durante o processo, rompendo o condicionamento mental. Agora, em uma metrópole hostil, ele deve caçar seus captores, enfrentar seus antigos aliados (ainda sob controle mental) e encontrar um portal para voltar para casa.
+The megacorporation **Fracture Tech** uses time rifts to kidnap heroes from various eras, subjecting them to brainwashing to turn them into bionic weapons under their control. The protagonist Samurai manages to awaken during the process, breaking the mental conditioning. Now, in a hostile metropolis, he must hunt down his captors, face his former allies (still under mental control), and find a portal to return home.
 
 ---
 
-## 4. Personagem e Progressão (MVP)
+## 4. Character and Progression (MVP)
 
-- **Protagonista:** O Samurai Escapista.
-- **Armamento:** Katana Cibernética que dispara lâminas de energia como projéteis à distância.
-- **Sistema de Upgrades (Data-Nodes):** O jogador coleta objetos brilhantes (Data-Nodes) pelo cenário ou dropados por inimigos. Esses dados são usados para melhorar os status:
-  - **Potência da Lâmina:** Aumenta o dano do ataque.
-  - **Eficiência do Dash:** Reduz o tempo de recarga da esquiva.
-  - **Integridade de Memória:** Aumenta a barra de vida total do herói.
-
----
-
-## 5. Experiência e Mecânicas
-
-- **O que o jogador faz?:** Ataca, defende, pula e corre. Também deve destruir portões e sistemas de segurança para avançar.
-- **Loop de Jogo:** Combate intenso → Coleta de Data-Nodes → Upgrades de Status → Enfrentamento de Chefes.
-- **Recompensas:**
-  - **Lógica:** Recuperação de vida e munição através de itens brilhantes no cenário.
-  - **Conquista:** Desbloqueio de novas áreas e fragmentos da memória do herói ao vencer desafios e puzzles.
+- **Protagonist:** The Escapist Samurai.
+- **Weaponry:** Cybernetic Katana that shoots energy blades as ranged projectiles.
+- **Upgrade System (Data-Nodes):** The player collects shiny objects (Data-Nodes) scattered throughout the environment or dropped by enemies. This data is used to improve stats:
+  - **Blade Power:** Increases attack damage.
+  - **Dash Efficiency:** Reduces dodge cooldown time.
+  - **Memory Integrity:** Increases the hero's total health bar.
 
 ---
 
-## 6. Cenários e Inimigos
+## 5. Experience and Mechanics
 
-O jogo possui 3 fases principais com estilo visual pixel art (SNES style):
-
-1. **Laboratório de Bio-Engenharia:** Ambiente industrial com lasers e sistemas de vigilância.
-2. **Periferia Neon:** Setores urbanos densos com plataformas móveis e perigos ambientais.
-3. **Torre Central Fracture:** O núcleo da corporação, onde a segurança é máxima.
-
-**Inimigos:** Drones, soldados robóticos e os heróis controlados pela corporação (Cavaleiro, Policial e Viking) que atuam como chefes de fase.
+- **What the player does?:** Attacks, defends, jumps, and dashes. Must also destroy gates and security systems to advance.
+- **Game Loop:** Intense Combat → Collect Data-Nodes → Stat Upgrades → Boss Fights.
+- **Rewards:**
+  - **Logic:** Health and ammo recovery through shiny items in the environment.
+  - **Achievement:** Unlocking new areas and fragments of the hero's memory upon overcoming challenges and puzzles.
 
 ---
 
-## 7. Música e Áudio
+## 6. Scenarios and Enemies
 
-- **Mood Musical:** Batidas de Darksynth pesadas para o combate, alternando com temas orientais melancólicos (como flautas) para a narrativa.
-- **Efeitos Sonoros:** Alertas de sistemas, sons de cortes elétricos, risadas malignas e avisos de "tempo acabando" para elevar a tensão.
+The game features 3 main stages with a pixel art visual style (SNES style):
+
+1. **Bio-Engineering Laboratory:** Industrial environment with lasers and surveillance systems.
+2. **Neon Outskirts:** Dense urban sectors with moving platforms and environmental hazards.
+3. **Fracture Central Tower:** The core of the corporation, where security is at its maximum.
+
+**Enemies:** Drones, robotic soldiers, and the heroes controlled by the corporation (Knight, Police Officer, and Viking) who act as stage bosses.
 
 ---
 
-## 8. Como Executar o Projeto
+## 7. Music and Audio
 
-1. Abra o terminal ou prompt de comando.
-2. Clone este repositório executando o seguinte comando:
+- **Musical Mood:** Heavy Darksynth beats for combat, alternating with melancholic oriental themes (like flutes) for the narrative.
+- **Sound Effects:** System alerts, electrical slash sounds, evil laughs, and "time running out" warnings to heighten tension.
+
+---
+
+## 8. How to Run the Project
+
+1. Open your terminal or command prompt.
+2. Clone this repository by running the following command:
    ```bash
    git clone https://github.com/fel0psmya/HeroFracture.git
    ```
-3. Abra o **Unity Hub**.
-4. Clique em **Add** (Adicionar) e selecione a pasta `HeroFracture` que acabou de ser clonada.
-5. Certifique-se de que a versão do Unity selecionada no Unity Hub seja a **6000.4.1f1**.
-6. Clique no projeto para abri-lo.
-7. Aguarde a importação dos pacotes, abra a cena inicial (geralmente dentro da pasta `Scenes`) e divirta-se!
+3. Open **Unity Hub**.
+4. Click on **Add** and select the recently cloned `HeroFracture` folder.
+5. Make sure the selected Unity version in Unity Hub is **6000.4.1f1**.
+6. Click on the project to open it.
+7. Wait for the packages to import, open the initial scene (usually inside the `Scenes` folder), and have fun!
